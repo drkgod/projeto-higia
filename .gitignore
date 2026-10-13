@@ -1,0 +1,19 @@
+# Dados e credenciais locais
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+*.db
+*.db-wal
+*.db-shm
+uploads/
+data/
+backups/
+raw/
+# Artefatos de execução
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+node_modules/
