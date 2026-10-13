@@ -3,8 +3,12 @@
 Atualizado: 13/10/2026
 Fase atual: 1 — CRM de prospecção rodando o piloto de clínicas de imagem
 
-Pacote local preparado: 7 SPECs (v1.1) com testes e 36 tasks. Nenhuma task foi executada.
+Progresso: 1 de 36 tasks concluída (3%). Task ed14fa15 (usuários e papéis) concluída, publicada (versão 4aae7ec) e testada pelo Igor. Sistema no ar: https://crmhigia-581c7.goskip.app
 
-Antes de começar: Dario com acesso ao Maestro e ao projeto Skip “CRM”; questionário a responder durante a construção (Q-01 a Q-21); domínio do e-mail e número de WhatsApp a providenciar na semana 1.
+Próxima ação: análise da task ffe9ee34 (área de administração do CRM) — telas de produtos, ICP, pipelines, cadência, modelos e configuração, base comum (alertas, eventos, execuções) e ganchos de teste.
 
-Próxima ação: primeira call de construção — SPEC-1-001, pedido dos documentos e perguntas da semana 1. Repositório: `drkgod/projeto-higia` (privado); convite ao Dario ainda não enviado.
+Em aberto (não bloqueiam a próxima task):
+- Material comercial ainda não colocado em `01_documentos/material-comercial/` pelo Dario (bloqueia a task de configuração, não a de administração).
+- Convite do Dario ao repositório e acesso dele ao Maestro/projeto Skip.
+- Questionário: Q-02 (horas da SDR), Q-14 (API de WhatsApp — bloqueia SPEC-1-005) e Q-18 (mínimo de contatos efetivos — bloqueia o painel da SPEC-1-007).
+- Senhas provisórias semeadas na migration 0002 (Higia@2026): trocar no primeiro acesso de cada usuário.
