@@ -40,9 +40,10 @@ tarefas que já têm um.
 - [ ] Configurar o CRM a partir do material da Higia @"Dario Calçada" !23/10/2026 [interno]  <!-- id:65b55cab-5caa-4970-8cc5-bfa82f31cd6e -->
   > O Maestro tira a configuração dos documentos que a Higia já tem (playbook, cadência, ICP, funil, objeções), monta uma proposta com a fonte de cada item e só pergunta o que não está escrito. Detalhe técnico de API vem da documentação oficial, nunca de pergunta ao cliente.
   > SPEC-1-001 · CA-1-04 · Entrega: 06_notas/proposta-configuracao.md.
-  - [ ] Colocar o material comercial da Higia no projeto @"Dario Calçada" !16/10/2026 [interno]  <!-- id:2681936e-0542-41ad-8e3b-52ac593464e9 -->
+  - [x] Colocar o material comercial da Higia no projeto @"Dario Calçada" !16/10/2026 [interno]  <!-- id:2681936e-0542-41ad-8e3b-52ac593464e9 -->
     > Dario coloca em 01_documentos/material-comercial/ a pasta enviada em 06/10 (blueprint, processo outbound, guia do Apollo, cadência com WhatsApp, matriz de objeções, sales planning, rotina e indicadores) e a lista de CNPJs dos clientes atuais.
     > SPEC-1-001 · CA-1-04 · Entrega: lista dos arquivos recebidos.
+    > Concluída 14/10/2026: entregue pelo Igor (12 arquivos na pasta + 1 na raiz a mover); lista de CNPJs de clientes e planilha de leads ficaram para o Igor enviar depois.
   - [ ] Montar a proposta de configuração a partir dos documentos @"Dario Calçada" !20/10/2026 [interno]  <!-- id:be2b72dd-216a-483d-9816-11fe4b79d3f5 -->
     > O Maestro lê os documentos e preenche produtos, público, sinais e pesos, bloqueios, faixas, etapas, motivos de perda, cadência, modelos, limites, filtros de licitação e linha de base do kickoff, com o trecho de onde tirou cada um.
     > SPEC-1-001 · CA-1-04 · Entrega: 06_notas/proposta-configuracao.md.

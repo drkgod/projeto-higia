@@ -49,3 +49,11 @@
 - Teste humano aprovado pelo Igor às 14:59 ("Já testei — aprovar a task"), após 2 correções publicadas (e645d88 interruptores de configuração + login de desativado bloqueado; 57b2875 editar/inativar/excluir usuários).
 - Verificação final: versão no ar = 57b2875 (a testada), produção HTTP 200, 4 usuários reais (3 ativos), dados do teste do Igor confirmados (1 produto, 2 ICPs, 1 pipeline, 1 cadência, 1 modelo).
 - fase.md: 2 de 36 concluídas (6%). Próxima task 65b55cab (configuração) bloqueada pelo material comercial; c02b4c1d (importação Apollo) é a próxima analisável.
+
+## 14/10/2026 · Material comercial colocado no projeto (pelo Igor)
+
+- 13 arquivos enviados via interface web do GitHub (MCP não transmite binário — provado com teste controlado; caminho git sem token no sandbox).
+- 12 arquivos em 01_documentos/material-comercial/ + 1 na raiz (Como Estruturar seu Modelo de Vendas.pptx) aguardando o Igor mover (delete + re-upload).
+- Subtarefa do Dario (2681936e) marcada como concluída; task 65b55cab (configuração guiada) DESBLOQUEADA.
+- Leitura antecipada para a configuração: Blueprint (MRR ~R$ 200 mil, ICP PME, 7 dias), Apollo (2 ICPs: clínicas 1–50 funcionários N/NE; hospitais 51–500 nacional), Outbound (cadência mista AIDA, estagnação 10 dias), Sales Planning (funil com etapas/estagnação/motivos de perda), Matriz de Objeções WhatsApp.
+- Pendente com o Igor: lista de CNPJs de clientes atuais, planilha de leads (xlsx) e mover o pptx da raiz.
