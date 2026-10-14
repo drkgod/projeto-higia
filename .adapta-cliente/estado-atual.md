@@ -1,21 +1,21 @@
 # Estado atual — Adapta Cliente
 
 - schema_version: adapta-cliente-state/v2
-- task_id: ffe9ee34-5704-4f54-adee-b29b1ab0dab0
+- task_id: 65b55cab-5caa-4970-8cc5-bfa82f31cd6e
 - executor: Jarvis (ETHOS)
 - owner_informativo: Dario Calçada
 - spec: 04_fase-atual/specs/spec-1-001-configuracao-guiada.md
-- analise: .adapta-cliente/analises/ffe9ee34-5704-4f54-adee-b29b1ab0dab0.md
-- etapa: concluida
-- teste_humano: aprovado 2026-10-14T14:59 ("Já testei — aprovar a task" — Igor Alves)
-- verificacao_automatica: passou (QA 0.0.6 4aad352, 0.0.7 471668d, 0.0.10 e645d88 e 0.0.11 57b2875: setup/static/build/integrations ok; T3/T4/T7 por API; T6 com captura; correções provadas em t8-correcao.md e t9-usuarios.md; verificação final: versão no ar = 57b2875, produção 200, 4 usuários reais intactos)
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-14-1605-json-getbool.md (e AP-2026-10-13-1750 da task anterior)
-- aprendizado_extra: 06_notas/aprendizado-continuo/AP-2026-10-14-1720-authrule-404.md
+- analise: 06_notas/analise-material-comercial-65b55cab.md
+- etapa: aguardando_teste_humano
+- autorizacao_implementacao: confirmada 2026-10-14T16:52 ("Aplique como está e se depois precisar faço alterações" — Igor Alves)
+- teste_humano: pendente (revisão do Igor no admin da configuração aplicada)
+- verificacao_automatica: passou (estado final verificado por API: 3 produtos, pipeline 9 etapas, ICP 01 v1 ativo com 7 fatores, cadência 11 passos ativa, 10 modelos aprovados, 8 itens de questionário; ICP/cadência de teste desativados)
+- aprendizado: pendente
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: 57b2875
-- skip_publicacao: publicada:57b2875 em 2026-10-14T17:16:21Z (versão testada e aprovada pelo Igor)
+- skip_versao: 57b2875 (sem mudança de código — configuração aplicada por dados)
+- skip_publicacao: publicada:57b2875
 - pendente_github: nao
-- ultima_acao: material comercial COMPLETO no repo (12 na pasta + 1 na raiz para o Igor mover); pendência do Dario resolvida em 14/10
-- proxima_acao: analisar 65b55cab (configuração guiada) a partir do material no repo; pendente com Igor: CNPJs de clientes, planilha de leads e mover o pptx da raiz
-- atualizado_em: 2026-10-14T16:30:00-03:00
+- ultima_acao: configuração aplicada no CRM com autorização do Igor; questionário com fonte de cada item
+- proxima_acao: revisão do Igor no admin; depois concluir 65b55cab e analisar c02b4c1d (importação Apollo, com a base de 413 leads)
+- atualizado_em: 2026-10-14T17:05:00-03:00

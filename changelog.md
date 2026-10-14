@@ -57,3 +57,17 @@
 - Subtarefa do Dario (2681936e) marcada como concluída; task 65b55cab (configuração guiada) DESBLOQUEADA.
 - Leitura antecipada para a configuração: Blueprint (MRR ~R$ 200 mil, ICP PME, 7 dias), Apollo (2 ICPs: clínicas 1–50 funcionários N/NE; hospitais 51–500 nacional), Outbound (cadência mista AIDA, estagnação 10 dias), Sales Planning (funil com etapas/estagnação/motivos de perda), Matriz de Objeções WhatsApp.
 - Pendente com o Igor: lista de CNPJs de clientes atuais, planilha de leads (xlsx) e mover o pptx da raiz.
+
+## 14/10/2026 · Bases comerciais recebidas do Igor
+
+- PDF Cadastro de Clientes: 31 clientes (18 ativos, 13 inativos) — CNPJs extraídos e limpos em 01_documentos/base-comercial/Higia_clientes_ativos.csv (commit b49bfe6).
+- XLSX de leads: 413 leads, 43 colunas (empresa, contato, cargo, LinkedIn, estágio, motivo de perda) — convertido para CSV (01_documentos/base-comercial/Higia_leads_2026-10-14.csv no próximo envio; cópia no workspace).
+
+## 14/10/2026 · Jarvis (ETHOS) · Task 65b55cab — configuração APLICADA no CRM (autorizada pelo Igor)
+
+- Igor autorizou às 16:52 ("Aplique como está e se depois precisar faço alterações").
+- Aplicado e verificado no CRM (produção): 3 produtos (PACS Apollo corrigido, Higia Report, Telelaudo); pipeline "Pré-vendas Outbound" com 9 etapas e 6 motivos de perda; ICP 01 — Clínicas de Imagem (PME) v1 ativa com 7 fatores (soma 100) e 3 bloqueios; cadência "Cadência Mista PME" v1 ativa com 11 passos D1–D11 ligados aos modelos reais; 10 modelos de mensagem (3 e-mails, 5 WhatsApps, 2 LinkedIns) aprovados; 8 itens no questionário com a fonte de cada decisão.
+- Roteiro de ligação: o campo canal só aceita email/whatsapp/linkedin (select do servidor) — o roteiro ficou documentado na proposta e entrará como tarefa da SDR na SPEC-1-003 (caixa de trabalho).
+- Limpeza dos resquícios do teste humano: "Clinica Pequenas" (ICP) e "Teste de cadencia" desativados; "Teste de Pipelne" e "PACS apollo com preço diferenciado" ficam para o Igor excluir ou manter.
+- Supressão: os 18 CNPJs de clientes ativos (CSV no repo) serão aplicados como bloqueio "já é cliente" na importação (c02b4c1d) — a coleção organizações só aceita escrita por hooks/superuser.
+- Pendentes (sem fonte): Q-02 (horas da SDR), Q-14 (API WhatsApp), Q-18 (mínimo contatos/100).
