@@ -3,9 +3,9 @@
 Atualizado: 14/10/2026
 Fase atual: 1 — CRM de prospecção rodando o piloto de clínicas de imagem
 
-Progresso: 4 de 36 tasks concluídas (11%). Tasks concluídas: ed14fa15 (usuários e papéis, 13/10), ffe9ee34 (área de administração, 14/10), 65b55cab (configuração guiada, 14/10), c02b4c1d (importação do Apollo, 14/10). Sistema no ar: https://crmhigia-581c7.goskip.app
+Progresso: 5 de 36 tasks concluídas (14%). Tasks concluídas: ed14fa15 (usuários e papéis, 13/10), ffe9ee34 (área de administração, 14/10), 65b55cab (configuração guiada, 14/10), c02b4c1d (importação do Apollo, 14/10), c014826a (captação CNES + Receita, 14/10). Sistema no ar: https://crmhigia-581c7.goskip.app
 
-Próxima ação: análise da task c014826a (captação CNES + Receita) — a importação já está no ar com a base real de 407 organizações e 405 contatos.
+Próxima ação: análise da task 34655984 (mostrar a nota de cada clínica com os motivos — pontuação T4/T5) quando o Igor pedir. Base atual: 606 organizações (407 da importação + 199 captadas do CNES da UF 22), 59 já enriquecidas pela Receita.
 
 Em aberto (não bloqueiam a próxima task):
 - Questionário: Q-02 (horas da SDR), Q-14 (API de WhatsApp — bloqueia SPEC-1-005) e Q-18 (mínimo de contatos efetivos — bloqueia o painel da SPEC-1-007).

@@ -1,20 +1,21 @@
 # Estado atual — Adapta Cliente
 
 - schema_version: adapta-cliente-state/v2
-- task_id: c02b4c1d-5d7d-4243-81ca-e9641e67d363
+- task_id: c014826a-ea15-471e-b512-7e86ace7ffec
 - executor: Jarvis (ETHOS)
 - owner_informativo: Dario Calçada
 - spec: 04_fase-atual/specs/spec-1-002-captacao-e-pontuacao.md
-- analise: concluida (c02b4c1d)
-- etapa: concluida (65b55cab 3/36; c02b4c1d 4/36)
-- teste_humano: aprovado 2026-10-14T17:38 ("pode seguir dessa forma pros 2" — Igor Alves; c02b4c1d sem teste humano próprio, ciclo completo no CL-007)
-- verificacao_automatica: passou (T2 provada na 80aebce: hash recusa reenvio 400; duplicados atualizados sem criar de novo; contato em supressão com optout_email=true; limpeza completa; importação real 413→407/6/0)
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-14-2100-hs256-json-limpeza.md
+- analise: .adapta-cliente/analises/c014826a-ea15-471e-b512-7e86ace7ffec.md
+- etapa: concluida
+- autorizacao_implementacao: confirmada 2026-10-14T20:20 ("Autorizar implementação" — Igor Alves; decisão: equipamentos até 3 meses para trás, sem resposta = sem informação)
+- teste_humano: nao_aplicavel (ciclo completo no CL-007, SPEC-1-007)
+- verificacao_automatica: passou (QA 0.0.19–0.0.23 verde; T3: 199 organizações do CNES UF 22 com fonte por campo, cursor sem duplicar; T9: 429 simulado adia 30 sem perder ponto, retomada enriqueceu 59 pela Receita)
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-14-2340-http-json-nome-icp.md
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: 80aebce
-- skip_publicacao: publicada:80aebce em 2026-10-14T21:01:26Z
+- skip_versao: eb2114f
+- skip_publicacao: publicada:eb2114f em 2026-10-14T23:38:14Z
 - pendente_github: nao
-- ultima_acao: task c02b4c1d CONCLUÍDA (4/36) — importação provada (T2) e base real carregada (407 orgs, 405 contatos)
-- proxima_acao: analisar c014826a (captação CNES + Receita) — próxima task analisável
-- atualizado_em: 2026-10-14T18:10:00-03:00
+- ultima_acao: task c014826a CONCLUÍDA (5/36) — captação CNES (199 orgs UF 22) e consulta CNPJ (59 enriquecidas) provadas
+- proxima_acao: aguardar o Igor pedir a próxima task (34655984 — pontuação explicável)
+- atualizado_em: 2026-10-14T20:45:00-03:00

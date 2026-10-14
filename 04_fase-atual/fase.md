@@ -61,9 +61,10 @@ tarefas que já têm um.
   > Upload de planilha CSV exportada do Apollo gratuito ou montada pela SDR, com relatório de inseridos, repetidos e rejeitados; quem está na supressão entra já bloqueado.
   > SPEC-1-002 · CA-1-07, CA-1-08 · Prova: T1, T2.
   > Concluída 14/10/2026: versão 80aebce publicada; T2 provada (t2-green.md: hash recusa reenvio, duplicados atualizados, supressão com opt-out); importação real dos 413 leads (407 inseridos, 6 duplicados, 0 rejeitados).
-- [ ] Trazer clínicas de imagem do CNES e da Receita @"Dario Calçada" !29/10/2026 [interno]  <!-- id:c014826a-ea15-471e-b512-7e86ace7ffec -->
+- [x] Trazer clínicas de imagem do CNES e da Receita @"Dario Calçada" !29/10/2026 [interno]  <!-- id:c014826a-ea15-471e-b512-7e86ace7ffec -->
   > Captação pelo CNES com os filtros do ICP (tipo de unidade, UF, município), conferida pela Receita/CNPJ (CNAE de imagem, porte, situação), com a fonte de cada dado e retomada em caso de falha.
   > SPEC-1-002 · CA-1-06, CA-1-11 · Prova: captação de uma UF e regressão de falha.
+  > Concluída 14/10/2026: versão eb2114f publicada; T3 provada (t3.md: 199 organizações do CNES da UF 22 com fonte por campo, cursor sem duplicar); T9 provada (t9-regressao.md: 429 simulado adia sem perder ponto, retomada enriquece 59 orgs pela Receita).
 - [ ] Mostrar a nota de cada clínica com os motivos @"Dario Calçada" !30/10/2026 [interno]  <!-- id:34655984-df24-4fad-93d9-bdbecdc8d5e7 -->
   > Pontuação pelo ICP ativo mostrando o que somou, o que tirou e o que não tinha informação; mudar o ICP repontua só quem ainda não foi abordado; e-mail pessoal ou CNPJ inativo não vira canal válido.
   > SPEC-1-002 · CA-1-09, CA-1-35, CA-1-40 · Prova: T4, T5.

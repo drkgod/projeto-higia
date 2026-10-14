@@ -1,70 +1,47 @@
-# Mapa — CRM_Higia (versão Skip 471668d)
+# Mapa — CRM_Higia (versão Skip eb2114f)
 
 ## Rotas
-| Rota | Página | Componentes principais | Serviços |
-|---|---|---|---|
-| `/login` | src/pages/Login.tsx | Card, Input, Label, Button | services/auth (entrar) |
-| `/` | src/pages/Index.tsx | — | services/auth (usuarioAtual) |
-| `/admin` | src/pages/admin/AdminLayout.tsx (Guard exigeAdmin) | AdminInicio (cards de resumo) | — |
-| `/admin/produtos` | src/pages/admin/Produtos.tsx | ConfirmarExclusao | services/admin-entidades |
-| `/admin/icps` | src/pages/admin/Icps.tsx | catálogo de fatores/bloqueios | services/admin-entidades |
-| `/admin/pipelines` | src/pages/admin/Pipelines.tsx | editor de etapas | services/admin-entidades |
-| `/admin/cadencias` | src/pages/admin/Cadencias.tsx | editor de passos | services/admin-entidades |
-| `/admin/modelos` | src/pages/admin/Modelos.tsx | variáveis {{...}} | services/admin-entidades |
-| `/admin/configuracao` | src/pages/admin/Configuracao.tsx | AlertDialog da pausa | services/admin-configuracao (pausaGeral) |
-| `/admin/usuarios` | src/pages/admin/Usuarios.tsx | — | services/auth (CRUD) |
-| `/admin/alertas` | src/pages/admin/Alertas.tsx | — | services/admin-configuracao |
-| `/admin/execucoes` | src/pages/admin/Execucoes.tsx | — | services/admin-configuracao |
-| `/admin/eventos` | src/pages/admin/Eventos.tsx | — | services/admin-configuracao |
-| `/admin/questionario` | src/pages/admin/Questionario.tsx | — | services/admin-configuracao |
-| `*` | src/pages/NotFound.tsx | — | — |
-
-Guardas: `src/components/Guard.tsx` — sem login → `/login`; `/admin/*` exige admin ou gestor;
-sem permissão → `src/pages/SemPermissao.tsx`. AdminLayout: menu lateral (Sheet no celular).
-
-## Coleções (13 + users)
-| Coleção | Campos principais | Regras de acesso |
+| Rota | Página | Observações |
 |---|---|---|
-| users (auth) | name, papel, ativo, teste | admin+gestor listam; self view; create só admin; update admin ou self sem papel/ativo/teste; delete admin |
-| produtos | nome, descricao, ativo | leitura interna; escrita admin/gestor |
-| icps | nome, pipeline, produto, versao, ativo, filtros, fatores, bloqueios, limiares, aprovado_por/em, teste | leitura interna; escrita admin/gestor + hooks RN-01/RN-02 |
-| pipelines | nome, tipo, etapas, motivos_perda, teste | leitura interna; escrita admin/gestor; privada exige ganho/perdido/reunião (hook em breve — validação hoje no formulário) |
-| cadencias | pipeline, versao, ativa, passos, dias_uteis, janela, regra_esgotamento, aprovado_por/em, teste | leitura interna; escrita admin/gestor + hooks RN-01/RN-02 |
-| modelos_mensagem | canal, nome, assunto, corpo, meta_template, versao, aprovado_por/em, ativo, teste | leitura interna; escrita admin/gestor + hooks RN-01/RN-02 |
-| configuracao | chave (único), valor (json), versao, autor, vigente_desde, historico | leitura interna; escrita só admin; pausa_geral via rota (admin/gestor) |
-| questionario | pergunta_id, origem, fonte, valor_proposto, status, confirmado_por/em, aplicado_em | só admin |
-| importacoes | fonte, estado, inseridos/duplicados/rejeitados/atualizados, erros, autor, teste | leitura admin/gestor; escrita hooks/superuser |
-| eventos_webhook | provedor, evento_id (único), tipo, processado, recebido_em, resultado, teste | leitura admin; escrita hooks/superuser |
-| alertas | tipo, mensagem, responsavel, status | leitura admin/gestor; update admin/gestor; create/delete hooks/superuser |
-| organizacoes | nome, cnpj, uf (esqueleto) | leitura interna; escrita definida na SPEC-1-002 |
+| `/login` | src/pages/Login.tsx | — |
+| `/` | src/pages/Index.tsx (Guard) | — |
+| `/admin` | AdminLayout (Guard exigeAdmin) | menu desktop + Sheet no celular |
+| `/admin` (index) | AdminInicio | — |
+| `/admin/produtos` `/admin/icps` `/admin/pipelines` `/admin/cadencias` `/admin/modelos` | telas de configuração | versionamento e aprovação |
+| `/admin/configuracao` | Configuracao | switches modo teste/simulação/canais |
+| `/admin/usuarios` | Usuarios | editar/excluir com confirmação |
+| `/admin/alertas` `/admin/execucoes` `/admin/eventos` `/admin/questionario` | operação | — |
+| `/admin/importar` | Importar | upload CSV + relatório |
+| `/admin/captacao` | Captacao | rodar CNES/CNPJ + histórico de lotes |
 
-## Hooks do servidor (pocketbase/hooks/)
-| Arquivo | Gatilho | Função |
+## Coleções
+| Coleção | Campos principais | Regras (resumo) |
 |---|---|---|
-| icps_create.js / icps_update.js | create/update request em icps | RN-01/RN-02: aprovação obrigatória para ativar, catálogo fechado, único ativo por pipeline, versão guardada imutável |
-| cadencias_create.js / cadencias_update.js | create/update request em cadencias | idem + modelo aprovado em todo passo automático + janela HH:mm + esgotamento |
-| modelos_create.js / modelos_update.js | create/update request em modelos_mensagem | idem (identidade canal+nome) |
-| admin_pausa.js | POST /backend/v1/admin/pausa | pausa geral com versão/autor/histórico |
-| teste_rodar.js | POST /backend/v1/teste/rodar/{job} | gancho de teste (só modo_teste + admin) |
-| teste_evento.js | POST /backend/v1/teste/evento/{provedor} | gancho de teste de evento (sem token, só modo_teste) |
-| teste_limpar.js | POST /backend/v1/teste/limpar | apaga teste=true e desativa usuários de teste |
+| users | papel (admin/gestor/sdr/licitacao), ativo, teste | authRule bloqueia desativado |
+| produtos, icps, pipelines, cadencias, modelos_mensagem | versao, ativo, aprovado_por/em, historico | versão ativa imutável; ativar exige aprovação |
+| configuracao | chave/valor (modo_teste, simulacao, feriados, dominios_pessoais, cnpjs_clientes…) | escrita via hook configuracao_update |
+| importacoes | fonte, estado, inseridos/duplicados/rejeitados, erros, arquivo_hash, autor, teste | hash recusa reenvio |
+| eventos_webhook, alertas | — | — |
+| organizacoes | nome (obrigatório), cnpj/cnpj_raiz, cnes, razao_social, nome_fantasia, tipo_unidade, uf, municipio, porte, situacao_cadastral, cnae_principal, equipamentos (json), site, telefone_empresa, email_empresa, fontes (json), sinais_sdr, status, pontuacao, fatores_pontuacao, motivo_status, contato_principal, lote_importacao, teste | índice único cnpj; escrita por hooks/admin |
+| contatos | organizacao, nome, cargo, papel, email, telefone, whatsapp, linkedin, fonte, confianca, optout_*, optin_*, excluido, teste | sdr edita; licitacao não vê |
+| alteracoes | colecao, registro, campo, antes, depois, autor, quando, motivo | só admin escreve |
+| supressao | codigo (HMAC), canal, motivo, quando | só admin |
 
-## Componentes reutilizáveis do projeto
-- `src/pages/admin/AdminLayout.tsx` — shell com menu de 2 grupos (Sheet no celular).
-- `src/components/admin/Estados.tsx` — EstadoCarregando/EstadoErro/EstadoVazio.
-- `src/components/ConfirmarExclusao.tsx` — AlertDialog de exclusão.
-- `src/components/Layout.tsx` — cabeçalho global (nome, papel, Sair).
-- `src/components/Guard.tsx` — guarda de rota por login/papel.
-- `src/services/auth.ts`, `admin-entidades.ts`, `admin-configuracao.ts` — única porta de dados.
-- `src/lib/mensagens-erro.ts`, `src/lib/formatos.ts` — erros PT-BR e formatos PT-BR.
+## Hooks (pocketbase/hooks/)
+| Arquivo | O que faz |
+|---|---|
+| captacao_cnes.js | rota /backend/v1/captacao/rodar + cron captacao_diaria (10:00 UTC): CNES tipos 39/36/22, cursor em importacoes, RN-01, bloqueios ja_cliente/unidade_publica, fonte por campo, equipamentos (competência retroativa, teto 30 buscas/rodada) |
+| captacao_cnpj.js | rota /backend/v1/captacao/cnpj + cron captacao_cnpj_diaria (10:20 UTC): BrasilAPI 1/s (teto 30), completa dados + sócios; 404→em_revisao; 429/5xx adia |
+| importar.js | rota /backend/v1/importar: CSV com hash, mapeamento modelo+RD, RN-01/RN-02 |
+| icps_create/update, cadencias_*, modelos_* | versionamento e aprovação |
+| configuracao_update.js | trilha da configuração |
+| admin_pausa.js | pausa geral |
+| teste_evento, teste_limpar, teste_rodar | ganchos de teste (limpeza cobre contatos/organizacoes) |
 
 ## Padrões observados
-- React + TypeScript + Vite + Tailwind + shadcn/ui; react-router-dom no `App.tsx`.
-- Componentes não chamam `pb` direto: dados só por `src/services/`.
-- Erros sempre em PT-BR; estados carregando/vazio/erro em toda lista.
-- Campos JSON no servidor lidos com JSON.parse(getString()) (AP-2026-10-14-1605).
+- React + TS + Vite + Tailwind + shadcn; rotas em App.tsx; dados só por services/ ou pb.send para /backend/v1/*.
+- Hooks: lógica inline nos callbacks (VM separada); res.json para corpo HTTP; campo json lido com JSON.parse(getString()).
+- Mensagens de erro em PT-BR; toasts sonner.
 
 ## Arquivos gerados que não se editam
-`.skip.config.json`, `src/lib/pocketbase/client.ts`, `src/lib/pocketbase/errors.ts`,
-`src/hooks/use-realtime.ts`, `src/components/ui/*`, `package.json`, lockfiles, `vite.config.ts`,
-`tsconfig*.json`, `.oxlintrc.json`.
+.skip.config.json, src/lib/pocketbase/client.ts, src/lib/pocketbase/errors.ts, src/hooks/use-realtime.ts, src/components/ui/*, package.json, lockfiles, vite.config.ts, tsconfig*.json, .oxlintrc.json
