@@ -1,0 +1,53 @@
+# Cadastro de Clientes — Higia (PDF original: Cadastro_de_Clientes.pdf, 14/10/2026)
+# 31 clientes no total: 18 ativos, 13 inativos. CNPJs extraídos do PDF; lista limpa em Higia_clientes_ativos.csv.
+
+Ativo                                          Inativo                                      Todos
+                    18                                             13                                          31
+Nome                                CPF / CNPJ / ID Estrangeiro         E-mail                    Telefone             Situação
+
+
+CENTROCOR LTDA                      13.369.964/0001-53                  -                         -                     Ativa
+
+
+
+PREFEITURA MUNICIPAL DE PARNAÍBA    19.374.673/0001-30                  -                         -                     Ativa
+
+
+
+PORTAL TELEMEDICINA                 19.309.563/0001-94                  -                         -                     Ativa
+
+
+
+MARINHO SERVICOS MEDICOS LTDA       13.291.328/0001-56                  -                         -                     Ativa
+
+
+
+UNIDADE CENTRAL DE EXAMES ÁGUA                                                                                          Ativa
+BRANCA - ISAC                       14.702.257/0039-72                  -                         -
+
+
+I. C. CARVALHO PIMENTEL SERVICOS                                                                                        Ativa
+MEDICOS                             29.308.769/0001-53                  -                         -
+
+
+HOSPITAL MUNICIPAL DE ARAGUAINA -                                       CONTABILIZE@CONTABILIZE                         Ativa
+ISAC                                14.702.257/0007-95                  DF.COM.BR                 6135487604
+
+
+UPA 24H ANATÓLIO DIAS CARNEIRO -                                        CONTABILIZE@CONTABILIZE                         Ativa
+ISAC                                14.702.257/0006-04                  DF.COM.BR                 6134587604
+
+
+
+QUALYMED DIAGNOSTICOS SERVICOS      34.432.004/0001-60                  -                         -                     Ativa
+
+
+
+MATERNIDADE MARQUES BASTOS          06.705.990/0001-40                  -                         -                     Ativa
+
+  Nome                                 CPF / CNPJ / ID Estrangeiro   E-mail   Telefone   Situação
+
+
+  UNIDADE CENTRAL DE EXAMES                                                               Ativa
+                                       14.702.257/0037-00            -        -
+  ESPERANTINA - ISAC
