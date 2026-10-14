@@ -37,3 +37,9 @@
 - Corrigido na versão 0.0.10 (e645d88, publicada 16:48 UTC): interruptores de modo de teste, simulação e canais na tela; trilha (versão/autor/histórico) gravada pelo servidor via hook configuracao_update; falha adicional corrigida — usuário desativado ainda logava, agora bloqueado pela authRule (migration 0006).
 - Provas em 05_entregas/fase-1/spec-1-001/t8-correcao.md (login desativado 403; mudança com versão+autor+histórico; SDR negado). Aprendizado: AP-2026-10-14-1720-authrule-404.md.
 - Estado: modo_teste=true restaurado, pausa_geral=false, SDR de teste desativado, 3 usuários reais intactos. Aguardando reteste do Igor.
+
+## 14/10/2026 · Jarvis (ETHOS) · Task ffe9ee34 — correção 2 (tela de Usuários)
+
+- Pergunta do Igor expôs falha: lista de Usuários sem botões de editar/excluir — impossível inativar, trocar papel ou excluir pela tela.
+- Corrigido na versão 0.0.11 (57b2875, publicada 17:16 UTC): menu ⋯ por linha com "Editar (papel e status)" e "Excluir" com confirmação; exclusão do próprio usuário oculta na interface; serviço ganhou excluirUsuario.
+- Provas por API (t9-usuarios.md): criar → editar papel+inativar → login bloqueado (403) → excluir (204). Usuários reais intactos.

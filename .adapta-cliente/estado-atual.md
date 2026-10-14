@@ -8,15 +8,15 @@
 - analise: .adapta-cliente/analises/ffe9ee34-5704-4f54-adee-b29b1ab0dab0.md
 - etapa: aguardando_teste_humano
 - autorizacao_implementacao: confirmada 2026-10-14T10:37 ("Pode" — Igor Alves, após análise apresentada)
-- teste_humano: pendente (1º teste do Igor achou falha na tela de configuração — corrigida na e645d88; aguardando reteste)
-- verificacao_automatica: passou (QA 0.0.6 4aad352, 0.0.7 471668d e 0.0.10 e645d88: setup/static/build/integrations ok; T3/T4/T7 provados por API; T6 com captura t6.png; correção provada em t8-correcao.md; limpeza executada — 3 usuários reais intactos)
+- teste_humano: pendente (1º teste corrigido na e645d88 — interruptores de configuração; pergunta sobre usuários expôs lista sem botões — corrigida na 57b2875; aguardando teste completo com o roteiro enviado)
+- verificacao_automatica: passou (QA 0.0.6 4aad352, 0.0.7 471668d, 0.0.10 e645d88 e 0.0.11 57b2875: setup/static/build/integrations ok; T3/T4/T7 por API; T6 com captura; correções provadas em t8-correcao.md e t9-usuarios.md; usuários reais intactos)
 - aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-14-1605-json-getbool.md (e AP-2026-10-13-1750 da task anterior)
 - aprendizado_extra: 06_notas/aprendizado-continuo/AP-2026-10-14-1720-authrule-404.md
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: e645d88
-- skip_publicacao: publicada:e645d88 em 2026-10-14T16:48:12Z (correção do 1º teste humano)
+- skip_versao: 57b2875
+- skip_publicacao: publicada:57b2875 em 2026-10-14T17:16:21Z (correção 2: editar/inativar/excluir usuários)
 - pendente_github: nao
-- ultima_acao: correção implementada, publicada e provada (t8-correcao.md); aguardando novo teste humano
-- proxima_acao: Igor retestar a tela de Configuração (interruptores) — depois concluir task
-- atualizado_em: 2026-10-14T17:30:00-03:00
+- ultima_acao: correção 2 implementada, publicada e provada (t9-usuarios.md); aguardando teste completo do Igor
+- proxima_acao: Igor testar o roteiro completo (Produtos, ICP, Pipelines, Cadências, Modelos, Usuários, Operação)
+- atualizado_em: 2026-10-14T17:25:00-03:00
