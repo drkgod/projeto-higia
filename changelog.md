@@ -43,3 +43,9 @@
 - Pergunta do Igor expôs falha: lista de Usuários sem botões de editar/excluir — impossível inativar, trocar papel ou excluir pela tela.
 - Corrigido na versão 0.0.11 (57b2875, publicada 17:16 UTC): menu ⋯ por linha com "Editar (papel e status)" e "Excluir" com confirmação; exclusão do próprio usuário oculta na interface; serviço ganhou excluirUsuario.
 - Provas por API (t9-usuarios.md): criar → editar papel+inativar → login bloqueado (403) → excluir (204). Usuários reais intactos.
+
+## 14/10/2026 · Jarvis (ETHOS) · Task ffe9ee34 CONCLUÍDA (2/36)
+
+- Teste humano aprovado pelo Igor às 14:59 ("Já testei — aprovar a task"), após 2 correções publicadas (e645d88 interruptores de configuração + login de desativado bloqueado; 57b2875 editar/inativar/excluir usuários).
+- Verificação final: versão no ar = 57b2875 (a testada), produção HTTP 200, 4 usuários reais (3 ativos), dados do teste do Igor confirmados (1 produto, 2 ICPs, 1 pipeline, 1 cadência, 1 modelo).
+- fase.md: 2 de 36 concluídas (6%). Próxima task 65b55cab (configuração) bloqueada pelo material comercial; c02b4c1d (importação Apollo) é a próxima analisável.

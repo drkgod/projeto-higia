@@ -1,14 +1,14 @@
 # STATUS — Higia Tecnologia
 
-Atualizado: 14/10/2026 (após correção 2)
+Atualizado: 14/10/2026
 Fase atual: 1 — CRM de prospecção rodando o piloto de clínicas de imagem
 
-Progresso: 1 de 36 tasks concluída (3%). Task ffe9ee34 (área de administração) implementada, publicada (versão 57b2875) e provada; 1º teste do Igor achou falha na tela de configuração (sem interruptores) — corrigida (e645d88); pergunta sobre usuários expôs lista sem botões de editar/excluir — corrigida (57b2875). Aguardando teste completo do Igor (roteiro de 10 min enviado no chat). Sistema no ar: https://crmhigia-581c7.goskip.app
+Progresso: 2 de 36 tasks concluídas (6%). Task ffe9ee34 (área de administração) CONCLUÍDA em 14/10 — aprovada pelo Igor após 2 correções do teste (e645d88: interruptores de configuração e login de desativado bloqueado; 57b2875: editar/inativar/excluir usuários). Sistema no ar: https://crmhigia-581c7.goskip.app
 
-Próxima ação: Igor testar Produtos, ICP, Pipelines, Cadências, Modelos, Usuários (editar/inativar/excluir) e abrir as telas de Operação; depois, análise da task 65b55cab (configuração a partir do material da Higia) — bloqueada até o material comercial chegar em 01_documentos/material-comercial/.
+Próxima ação: cobrar do Dario o material comercial em 01_documentos/material-comercial/ (desbloqueia 65b55cab, configuração guiada); análise de c02b4c1d (importação do Apollo) pode começar sem ele.
 
 Em aberto (não bloqueiam a próxima task):
-- Material comercial ainda não colocado em `01_documentos/material-comercial/` pelo Dario (bloqueia a task de configuração).
+- Material comercial ainda não colocado em `01_documentos/material-comercial/` pelo Dario (BLOQUEIA 65b55cab).
 - Convite do Dario ao repositório e acesso dele ao Maestro/projeto Skip.
 - Questionário: Q-02 (horas da SDR), Q-14 (API de WhatsApp — bloqueia SPEC-1-005) e Q-18 (mínimo de contatos efetivos — bloqueia o painel da SPEC-1-007).
 - Senhas provisórias semeadas na migration 0002 (Higia@2026): trocar no primeiro acesso de cada usuário.

@@ -33,9 +33,10 @@ tarefas que já têm um.
   > Usuários de Dario (admin), Igor (gestor), SDR e responsável por licitações, sem cadastro público; cada papel vê só o que a matriz de acesso permite.
   > SPEC-1-001 · CA-1-01, CA-1-42 · Prova: T1, T2.
   > Concluída 13/10/2026: versão 4aae7ec publicada e testada pelo Igor; provas T1/T2 em 05_entregas/fase-1/spec-1-001/ (t2-green.md, 15 casos contra o backend real).
-- [/] Montar a área de administração do CRM @"Dario Calçada" !21/10/2026 [interno]  <!-- id:ffe9ee34-5704-4f54-adee-b29b1ab0dab0 -->
+- [x] Montar a área de administração do CRM @"Dario Calçada" !21/10/2026 [interno]  <!-- id:ffe9ee34-5704-4f54-adee-b29b1ab0dab0 -->
   > Telas de produtos, ICP, pipelines, cadência, modelos e configuração, com versões e aprovação; base comum (alertas, eventos, execuções) e ganchos de teste; modo de teste e simulação ligados.
   > SPEC-1-001 · CA-1-02, CA-1-03, CA-1-05 · Prova: T3, T4, T6, T7.
+  > Concluída 14/10/2026: versão 57b2875 publicada e testada pelo Igor (2 correções do teste: interruptores de configuração na e645d88, editar/inativar/excluir usuários na 57b2875); provas em 05_entregas/fase-1/spec-1-001/ (t3, t4, t6, t7-regressao, t8-correcao, t9-usuarios).
 - [ ] Configurar o CRM a partir do material da Higia @"Dario Calçada" !23/10/2026 [interno]  <!-- id:65b55cab-5caa-4970-8cc5-bfa82f31cd6e -->
   > O Maestro tira a configuração dos documentos que a Higia já tem (playbook, cadência, ICP, funil, objeções), monta uma proposta com a fonte de cada item e só pergunta o que não está escrito. Detalhe técnico de API vem da documentação oficial, nunca de pergunta ao cliente.
   > SPEC-1-001 · CA-1-04 · Entrega: 06_notas/proposta-configuracao.md.

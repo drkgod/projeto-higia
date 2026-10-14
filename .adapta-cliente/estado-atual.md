@@ -6,17 +6,17 @@
 - owner_informativo: Dario Calçada
 - spec: 04_fase-atual/specs/spec-1-001-configuracao-guiada.md
 - analise: .adapta-cliente/analises/ffe9ee34-5704-4f54-adee-b29b1ab0dab0.md
-- etapa: aguardando_teste_humano
+- etapa: concluida
 - autorizacao_implementacao: confirmada 2026-10-14T10:37 ("Pode" — Igor Alves, após análise apresentada)
-- teste_humano: pendente (1º teste corrigido na e645d88 — interruptores de configuração; pergunta sobre usuários expôs lista sem botões — corrigida na 57b2875; aguardando teste completo com o roteiro enviado)
-- verificacao_automatica: passou (QA 0.0.6 4aad352, 0.0.7 471668d, 0.0.10 e645d88 e 0.0.11 57b2875: setup/static/build/integrations ok; T3/T4/T7 por API; T6 com captura; correções provadas em t8-correcao.md e t9-usuarios.md; usuários reais intactos)
+- teste_humano: aprovado 2026-10-14T14:59 ("Já testei — aprovar a task" — Igor Alves)
+- verificacao_automatica: passou (QA 0.0.6 4aad352, 0.0.7 471668d, 0.0.10 e645d88 e 0.0.11 57b2875: setup/static/build/integrations ok; T3/T4/T7 por API; T6 com captura; correções provadas em t8-correcao.md e t9-usuarios.md; verificação final: versão no ar = 57b2875, produção 200, 4 usuários reais intactos)
 - aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-14-1605-json-getbool.md (e AP-2026-10-13-1750 da task anterior)
 - aprendizado_extra: 06_notas/aprendizado-continuo/AP-2026-10-14-1720-authrule-404.md
 - sistema: CRM_Higia
 - skip_projeto: 62151
 - skip_versao: 57b2875
-- skip_publicacao: publicada:57b2875 em 2026-10-14T17:16:21Z (correção 2: editar/inativar/excluir usuários)
+- skip_publicacao: publicada:57b2875 em 2026-10-14T17:16:21Z (versão testada e aprovada pelo Igor)
 - pendente_github: nao
-- ultima_acao: correção 2 implementada, publicada e provada (t9-usuarios.md); aguardando teste completo do Igor
-- proxima_acao: Igor testar o roteiro completo (Produtos, ICP, Pipelines, Cadências, Modelos, Usuários, Operação)
-- atualizado_em: 2026-10-14T17:25:00-03:00
+- ultima_acao: task ffe9ee34 CONCLUÍDA (2/36) — teste humano aprovado pelo Igor
+- proxima_acao: próxima task 65b55cab (configuração) BLOQUEADA pelo material comercial; analisar c02b4c1d (importação Apollo) enquanto isso
+- atualizado_em: 2026-10-14T15:05:00-03:00
