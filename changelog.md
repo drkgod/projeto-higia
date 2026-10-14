@@ -30,3 +30,10 @@
 - Provas: T3 (ativação sem aprovação recusada 400), T4 (peso mudado como gestor → v2 ativa, v1 guardada), T7 (versão guardada imutável 400; reativação 200; regressão de acesso negada), T6 (t6.png + 6 chamadas de API: SDR 403, execução registrada, pausa com histórico, evento registrado, limpeza completa).
 - Correção durante as provas: leitura de campo JSON com getBool devolvia false — corrigido para JSON.parse(getString()) na 471668d (AP-2026-10-14-1605).
 - Intermitência de plataforma: o MCP do Skip ficou fora entre ~10:50 e ~13:00 UTC; implementação retomada e concluída após a volta.
+
+## 14/10/2026 · Jarvis (ETHOS) · Task ffe9ee34 — correção do 1º teste humano
+
+- Teste do Igor na tela de Configuração apontou: sem interruptor para modo de teste e simulação (só exibição); "Pausar" é da operação, não dessas chaves.
+- Corrigido na versão 0.0.10 (e645d88, publicada 16:48 UTC): interruptores de modo de teste, simulação e canais na tela; trilha (versão/autor/histórico) gravada pelo servidor via hook configuracao_update; falha adicional corrigida — usuário desativado ainda logava, agora bloqueado pela authRule (migration 0006).
+- Provas em 05_entregas/fase-1/spec-1-001/t8-correcao.md (login desativado 403; mudança com versão+autor+histórico; SDR negado). Aprendizado: AP-2026-10-14-1720-authrule-404.md.
+- Estado: modo_teste=true restaurado, pausa_geral=false, SDR de teste desativado, 3 usuários reais intactos. Aguardando reteste do Igor.

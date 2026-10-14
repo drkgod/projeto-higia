@@ -1,11 +1,11 @@
 # STATUS — Higia Tecnologia
 
-Atualizado: 14/10/2026
+Atualizado: 14/10/2026 (após 1º teste humano)
 Fase atual: 1 — CRM de prospecção rodando o piloto de clínicas de imagem
 
-Progresso: 1 de 36 tasks concluída (3%). Task ffe9ee34 (área de administração) implementada, publicada (versão 471668d) e provada (T3/T4/T6/T7); aguardando teste humano do Igor/Dario. Sistema no ar: https://crmhigia-581c7.goskip.app
+Progresso: 1 de 36 tasks concluída (3%). Task ffe9ee34 (área de administração) implementada, publicada (versão e645d88) e provada; 1º teste do Igor achou falha na tela de configuração (sem interruptores) — corrigida e reprovada (t8-correcao.md). Aguardando novo teste. Sistema no ar: https://crmhigia-581c7.goskip.app
 
-Próxima ação: teste humano da ffe9ee34; depois, análise da task 65b55cab (configuração a partir do material da Higia) — bloqueada até o material comercial chegar em 01_documentos/material-comercial/.
+Próxima ação: Igor retestar a tela de Configuração (ligar/desligar modo de teste e simulação); depois, análise da task 65b55cab (configuração a partir do material da Higia) — bloqueada até o material comercial chegar em 01_documentos/material-comercial/.
 
 Em aberto (não bloqueiam a próxima task):
 - Material comercial ainda não colocado em `01_documentos/material-comercial/` pelo Dario (bloqueia a task de configuração).
