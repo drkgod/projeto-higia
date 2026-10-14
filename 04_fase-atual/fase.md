@@ -37,31 +37,30 @@ tarefas que já têm um.
   > Telas de produtos, ICP, pipelines, cadência, modelos e configuração, com versões e aprovação; base comum (alertas, eventos, execuções) e ganchos de teste; modo de teste e simulação ligados.
   > SPEC-1-001 · CA-1-02, CA-1-03, CA-1-05 · Prova: T3, T4, T6, T7.
   > Concluída 14/10/2026: versão 57b2875 publicada e testada pelo Igor (2 correções do teste: interruptores de configuração na e645d88, editar/inativar/excluir usuários na 57b2875); provas em 05_entregas/fase-1/spec-1-001/ (t3, t4, t6, t7-regressao, t8-correcao, t9-usuarios).
-- [ ] Configurar o CRM a partir do material da Higia @"Dario Calçada" !23/10/2026 [interno]  <!-- id:65b55cab-5caa-4970-8cc5-bfa82f31cd6e -->
+- [x] Configurar o CRM a partir do material da Higia @"Dario Calçada" !23/10/2026 [interno]  <!-- id:65b55cab-5caa-4970-8cc5-bfa82f31cd6e -->
   > O Maestro tira a configuração dos documentos que a Higia já tem (playbook, cadência, ICP, funil, objeções), monta uma proposta com a fonte de cada item e só pergunta o que não está escrito. Detalhe técnico de API vem da documentação oficial, nunca de pergunta ao cliente.
   > SPEC-1-001 · CA-1-04 · Entrega: 06_notas/proposta-configuracao.md.
+  > Concluída 14/10/2026: proposta montada com fonte por item, aplicada no CRM com autorização do Igor ("Aplique como está") e revisada por ele ("Revisado e ok"). Resquícios do teste apagados com autorização.
   - [x] Colocar o material comercial da Higia no projeto @"Dario Calçada" !16/10/2026 [interno]  <!-- id:2681936e-0542-41ad-8e3b-52ac593464e9 -->
     > Dario coloca em 01_documentos/material-comercial/ a pasta enviada em 06/10 (blueprint, processo outbound, guia do Apollo, cadência com WhatsApp, matriz de objeções, sales planning, rotina e indicadores) e a lista de CNPJs dos clientes atuais.
     > SPEC-1-001 · CA-1-04 · Entrega: lista dos arquivos recebidos.
-    > Concluída 14/10/2026: entregue pelo Igor (12 arquivos na pasta + 1 na raiz a mover); lista de CNPJs de clientes e planilha de leads ficaram para o Igor enviar depois.
-  - [ ] Montar a proposta de configuração a partir dos documentos @"Dario Calçada" !20/10/2026 [interno]  <!-- id:be2b72dd-216a-483d-9816-11fe4b79d3f5 -->
+    > Concluída 14/10/2026: entregue pelo Igor (13 arquivos na pasta); lista de CNPJs de clientes e planilha de leads também recebidas e convertidas.
+  - [x] Montar a proposta de configuração a partir dos documentos @"Dario Calçada" !20/10/2026 [interno]  <!-- id:be2b72dd-216a-483d-9816-11fe4b79d3f5 -->
     > O Maestro lê os documentos e preenche produtos, público, sinais e pesos, bloqueios, faixas, etapas, motivos de perda, cadência, modelos, limites, filtros de licitação e linha de base do kickoff, com o trecho de onde tirou cada um.
     > SPEC-1-001 · CA-1-04 · Entrega: 06_notas/proposta-configuracao.md.
-  - [ ] Responder as perguntas que os documentos não respondem @"Dario Calçada" !20/10/2026 [interno]  <!-- id:80f640c2-c65c-4120-8c60-78e1432d1744 -->
+  - [x] Responder as perguntas que os documentos não respondem @"Dario Calçada" !20/10/2026 [interno]  <!-- id:80f640c2-c65c-4120-8c60-78e1432d1744 -->
     > Só 7 itens, de uma vez: quem usa o CRM e quem é a SDR; qual regra de sem conexão vale; API e número de WhatsApp (com as consequências); domínio do e-mail; quem tria as licitações; mínimo de contatos efetivos a cada 100.
     > SPEC-1-001 · CA-1-04 · Entrega: 06_notas/questionario-fase-1.md.
-  - [ ] Revisar a proposta de configuração com o Igor @"Igor Alves" !22/10/2026 [interno]  <!-- id:46c1f544-708e-4276-9b39-16453419c124 -->
+  - [x] Revisar a proposta de configuração com o Igor @"Igor Alves" !22/10/2026 [interno]  <!-- id:46c1f544-708e-4276-9b39-16453419c124 -->
     > Numa sessão só, o Igor confere a proposta montada pelo Maestro e aprova ou corrige cada item.
     > SPEC-1-001 · CA-1-04 · Entrega: proposta com aprovação registrada.
-  - [ ] Aplicar no CRM a configuração aprovada @"Dario Calçada" !23/10/2026 [interno]  <!-- id:26ae5e08-8a63-4253-8899-84c6faebb00f -->
+  - [x] Aplicar no CRM a configuração aprovada @"Dario Calçada" !23/10/2026 [interno]  <!-- id:26ae5e08-8a63-4253-8899-84c6faebb00f -->
     > O Maestro grava no admin o que foi aprovado, com a fonte de cada item; o que ficou sem fonte nem resposta continua pendente e bloqueia só a função que depende dele.
     > SPEC-1-001 · CA-1-04 · Prova: T5 e T6.
-- [ ] Aprovar o ICP do piloto no admin @"Igor Alves" !22/10/2026 [interno]  <!-- id:93c8bd88-d29b-4475-8620-0b6af5be7c09 -->
-  > Igor confere o ICP montado a partir do guia do Apollo e do blueprint (filtros, sinais, bloqueios e faixas da nota) e aprova a versão 1.
-  > SPEC-1-001 · CA-1-02, CA-1-03 · Prova: T3, T4.
-- [ ] Importar a planilha do Apollo sem repetir clínicas @"Dario Calçada" !27/10/2026 [interno]  <!-- id:c02b4c1d-5d7d-4243-81ca-e9641e67d363 -->
+- [x] Importar a planilha do Apollo sem repetir clínicas @"Dario Calçada" !27/10/2026 [interno]  <!-- id:c02b4c1d-5d7d-4243-81ca-e9641e67d363 -->
   > Upload de planilha CSV exportada do Apollo gratuito ou montada pela SDR, com relatório de inseridos, repetidos e rejeitados; quem está na supressão entra já bloqueado.
   > SPEC-1-002 · CA-1-07, CA-1-08 · Prova: T1, T2.
+  > Concluída 14/10/2026: versão 80aebce publicada; T2 provada (t2-green.md: hash recusa reenvio, duplicados atualizados, supressão com opt-out); importação real dos 413 leads (407 inseridos, 6 duplicados, 0 rejeitados).
 - [ ] Trazer clínicas de imagem do CNES e da Receita @"Dario Calçada" !29/10/2026 [interno]  <!-- id:c014826a-ea15-471e-b512-7e86ace7ffec -->
   > Captação pelo CNES com os filtros do ICP (tipo de unidade, UF, município), conferida pela Receita/CNPJ (CNAE de imagem, porte, situação), com a fonte de cada dado e retomada em caso de falha.
   > SPEC-1-002 · CA-1-06, CA-1-11 · Prova: captação de uma UF e regressão de falha.

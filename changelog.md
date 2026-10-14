@@ -76,3 +76,13 @@
 - Limpeza autorizada executada: 5 resquícios do teste apagados (pipeline "Teste de Pipelne", modelo "PACS apollo com preço diferenciado", 2 ICPs "Clinica Pequenas", cadência "Teste de cadencia") — todos 204 confirmados.
 - Estado final do CRM: 3 produtos, 1 pipeline (9 etapas), 1 ICP ativo (7 fatores, soma 100), 1 cadência ativa (11 passos), 10 modelos aprovados, 8 itens de questionário com fonte.
 - Configuração guiada da SPEC-1-001 completa. Próxima task: c02b4c1d (importação do Apollo) — com a base real de 413 leads.
+
+## 14/10/2026 · Jarvis (ETHOS) · Task c02b4c1d CONCLUÍDA (4/36)
+
+- Autorizada às 17:38 ("pode seguir dessa forma pros 2"): segredo SUPRESSAO_CHAVE gerado pelo Jarvis (Dario pode trocar) e importação real dos 413 leads como validação.
+- Versões 0.0.13–0.0.17 (4016094, 28f3fb4, 3dea141, 5327907, 80aebce) publicadas; QA verde em todas.
+- Migration 0007: campos completos em organizacoes (cnpj_raiz, fontes, sinais_sdr, status, pontuacao etc.) + coleções contatos, alteracoes, supressao com regras da SPEC.
+- Rota /backend/v1/importar: hash de arquivo (mesmo arquivo recusado), mapeamento modelo padrão + RD Station/Apollo, RN-01 (duplicado atualiza vazios + fontes), RN-02 (supressão entra com opt-out), relatório em importacoes. Tela /admin/importar com relatório e histórico.
+- Provas T2 (t2-green.md): 4 inseridos; reenvio recusado 400; 3 duplicados atualizados + 1 inserido + 0 rejeitados; contato em supressão com optout_email=true; limpeza completa.
+- Importação real: 413 leads → 407 inseridos, 6 duplicados, 0 rejeitados (lote imp_20261014210153, teste=false). CRM com 407 organizações e 405 contatos reais.
+- Aprendizado: AP-2026-10-14-2100-hs256-json-limpeza.md (hs256 msg-primeiro; json volta como string; limpeza cobre toda coleção nova).
