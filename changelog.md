@@ -21,3 +21,12 @@
 - Login, guardas de rota por papel e área /admin com acesso controlado; provas T1/T2 em 05_entregas/fase-1/spec-1-001/ (t2-green.md: 15 casos contra o backend real, incluindo caminhos de erro).
 - Teste humano aprovado pelo Igor (13/10). DECISÃO DO CLIENTE: papéis admin para Dario e Igor e sdr para Jesus (comercial@); subdomínio dedicado outbound.higiatec.com.br para a cadência de e-mail.
 - Achado registrado: senha provisória de primeiro acesso semeada na migration 0002 — cada usuário troca no primeiro login; tela de troca de senha fica como melhoria para task futura.
+
+## 14/10/2026 · Jarvis (ETHOS) · Task ffe9ee34 implementada: área de administração do CRM
+
+- Versões 0.0.6 (4aad352) e 0.0.7 (471668d) aplicadas e publicadas (https://crmhigia-581c7.goskip.app) em 14/10 16:10–16:13 UTC; QA verde em ambas (setup/static/build/integrations).
+- Migrações 0003 (campos completos das coleções versionadas), 0004 (configuração inicial: modo_teste, simulação, feriados 2026–2027, domínios pessoais) e 0005 (usuários de teste da SPEC) aplicadas.
+- 10 hooks: versionamento e aprovação (RN-01/RN-02) em icps/cadencias/modelos, pausa geral e 3 ganchos de teste; 12 telas de administração com menu próprio e serviços dedicados.
+- Provas: T3 (ativação sem aprovação recusada 400), T4 (peso mudado como gestor → v2 ativa, v1 guardada), T7 (versão guardada imutável 400; reativação 200; regressão de acesso negada), T6 (t6.png + 6 chamadas de API: SDR 403, execução registrada, pausa com histórico, evento registrado, limpeza completa).
+- Correção durante as provas: leitura de campo JSON com getBool devolvia false — corrigido para JSON.parse(getString()) na 471668d (AP-2026-10-14-1605).
+- Intermitência de plataforma: o MCP do Skip ficou fora entre ~10:50 e ~13:00 UTC; implementação retomada e concluída após a volta.

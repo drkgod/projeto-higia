@@ -1,21 +1,21 @@
 # Estado atual — Adapta Cliente
 
 - schema_version: adapta-cliente-state/v2
-- task_id: ed14fa15-ebe9-480c-8594-5cdea093763a
+- task_id: ffe9ee34-5704-4f54-adee-b29b1ab0dab0
 - executor: Jarvis (ETHOS)
 - owner_informativo: Dario Calçada
 - spec: 04_fase-atual/specs/spec-1-001-configuracao-guiada.md
-- analise: .adapta-cliente/analises/ed14fa15-ebe9-480c-8594-5cdea093763a.md
-- etapa: concluida
-- autorizacao_implementacao: confirmada 2026-10-13T17:36 ("Autorizo implementar a task ed14fa15 com as escolhas marcadas" — papéis: Dario/Igor admin, Jesus sdr; domínio: subdomínio outbound.higiatec.com.br)
-- teste_humano: aprovado 2026-10-13T17:50 ("Fiz todos os testes e funcionou" — Igor Alves)
-- verificacao_automatica: passou (QA 0.0.4 6b5a35a e 0.0.5 4aae7ec; migrações 0001+0002 aplicadas; revalidação do zero na conclusão: publicação provada isPublished=true lastPublishedRef=4aae7ec, login com senha errada 400, checklist do verificador completo)
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-13-1750-skip-preview-sem-api.md
+- analise: .adapta-cliente/analises/ffe9ee34-5704-4f54-adee-b29b1ab0dab0.md
+- etapa: aguardando_teste_humano
+- autorizacao_implementacao: confirmada 2026-10-14T10:37 ("Pode" — Igor Alves, após análise apresentada)
+- teste_humano: pendente
+- verificacao_automatica: passou (QA 0.0.6 4aad352 e 0.0.7 471668d: setup/static/build/integrations ok; migrações 0003+0004+0005 aplicadas; T3/T4/T7 provados por API com as fixtures da SPEC; T6 provado com captura t6.png + 6 chamadas de API; limpeza executada — 3 usuários reais intactos)
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-14-1605-json-getbool.md (e AP-2026-10-13-1750 da task anterior)
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: 4aae7ec
-- skip_publicacao: publicada:4aae7ec em 2026-10-13T20:44:50Z
+- skip_versao: 471668d
+- skip_publicacao: publicada:471668d em 2026-10-14T16:13:18Z
 - pendente_github: nao
-- ultima_acao: task ed14fa15 concluída (verificação do zero, fase.md/STATUS/changelog atualizados, aprendizado capturado)
-- proxima_acao: enviar registros ao GitHub (modo registrar) e parar — próxima task só com novo pedido do cliente
-- atualizado_em: 2026-10-13T17:55:00-03:00
+- ultima_acao: task ffe9ee34 implementada, publicada e provada (T3/T4/T6/T7); aguardando teste humano
+- proxima_acao: teste humano do Igor/Dario na URL de produção
+- atualizado_em: 2026-10-14T13:25:00-03:00
