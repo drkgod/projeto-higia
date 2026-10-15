@@ -9,13 +9,13 @@
 - etapa: concluida
 - autorizacao_implementacao: confirmada 2026-10-15T11:09 ("Autorizar implementação" — Igor Alves; decisão: corrigir unidade_publica pela natureza jurídica, reavaliar as 199)
 - teste_humano: nao_aplicavel (ciclo completo no CL-007, SPEC-1-007)
-- verificacao_automatica: passou (QA 0.0.24–0.0.32 verde; T4 10/10 casos; T5 peso do ICP repontua; T4b 199 reavaliadas)
+- verificacao_automatica: passou (QA 0.0.24–0.0.38 verde; T4 10/10 casos; T5 peso do ICP repontua; T4b 199 reavaliadas; correções de navegação/layout e do enriquecimento provadas por API)
 - aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-15-1440-fila-pesos.md
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: 2769b5c
-- skip_publicacao: publicada:2769b5c em 2026-10-15T14:37:08Z
+- skip_versao: 45dce2d
+- skip_publicacao: publicada:45dce2d em 2026-10-15T19:19:33Z
 - pendente_github: nao
-- ultima_acao: task 34655984 CONCLUÍDA (6/36) — pontuação explicável, fila /clinicas, navegação pós-login, reavaliação das 199
+- ultima_acao: correções pós-revisão do Igor (botão Início, contêiner, enriquecimento pela Receita: filtro por fonte, mapeamento BrasilAPI, ATIVA/Ativa, reavaliação das descartadas por nota baixa)
 - proxima_acao: aguardar o Igor pedir a próxima task (a1326b8f — revisão da SDR)
-- atualizado_em: 2026-10-15T11:45:00-03:00
+- atualizado_em: 2026-10-15T16:20:00-03:00

@@ -1,13 +1,13 @@
-# Mapa — CRM_Higia (versão Skip 2769b5c)
+# Mapa — CRM_Higia (versão Skip 45dce2d)
 
 ## Rotas
 | Rota | Página | Observações |
 |---|---|---|
 | `/login` | src/pages/Login.tsx | navegação por papel após entrar |
 | `/` | src/pages/Index.tsx (Guard) | botões Clínicas + Administração (por permissão) |
-| `/clinicas` | src/pages/Clinicas.tsx (Guard) | fila com nota, filtros, busca, paginação |
+| `/clinicas` | src/pages/Clinicas.tsx (Guard) | fila com nota, filtros, busca, paginação; botão Início |
 | `/clinica/:id` | src/pages/ClinicaDetalhe.tsx (Guard) | nota fator por fator + fonte por campo |
-| `/admin` | AdminLayout (Guard exigeAdmin) | menu desktop + Sheet no celular |
+| `/admin` | AdminLayout (Guard exigeAdmin) | menu desktop + Sheet no celular; botão Início no topo |
 | `/admin` (index) | AdminInicio | — |
 | `/admin/produtos` `/admin/icps` `/admin/pipelines` `/admin/cadencias` `/admin/modelos` | telas de configuração | versionamento e aprovação |
 | `/admin/configuracao` | Configuracao | switches modo teste/simulação/canais |
@@ -32,9 +32,9 @@
 ## Hooks (pocketbase/hooks/)
 | Arquivo | O que faz |
 |---|---|
-| pontuacao.js | rota /backend/v1/pontuacao/rodar + cron pontuacao_diaria (10:40 UTC): fila por -created (teto 200), fatores com pesos do ICP ATIVO, bloqueios (natureza 1xxx), canal válido RN-10, status RN-05/06/07, contato principal RN-11 |
+| pontuacao.js | rota /backend/v1/pontuacao/rodar + cron pontuacao_diaria (10:40 UTC): fila por -updated (teto 200), fatores com pesos do ICP ATIVO, bloqueios (natureza 1xxx; cnpj_inativo compara em minúsculas), canal válido RN-10, status RN-05/06/07, contato principal RN-11; fila reavalia descartadas por unidade_publica/nota_abaixo_do_limiar/cnpj_inativo |
 | captacao_cnes.js | rota /backend/v1/captacao/rodar + cron captacao_diaria (10:00 UTC): CNES tipos 39/36/22, cursor em importacoes, RN-01, bloqueios ja_cliente (esfera NÃO descarta mais), fonte por campo, equipamentos (competência retroativa, teto 30 buscas/rodada) |
-| captacao_cnpj.js | rota /backend/v1/captacao/cnpj + cron captacao_cnpj_diaria (10:20 UTC): BrasilAPI 1/s (teto 30), completa dados + sócios; 404→em_revisao; 429/5xx adia |
+| captacao_cnpj.js | rota /backend/v1/captacao/cnpj + cron captacao_cnpj_diaria (10:20 UTC): BrasilAPI 1/s (teto 30); fila por fontes SEM captacao_receita_v2 (não por razao_social vazia — as 407 da planilha têm razão social); inclui descartadas por nota_abaixo_do_limiar e cnpj_inativo (re-consulta com mapeamento corrigido); porte = objeto {descricao} ou string; CNAE = cnae_fiscal_descricao; sócios como contatos |
 | importar.js | rota /backend/v1/importar: CSV com hash, mapeamento modelo+RD, RN-01/RN-02 |
 | icps_create/update, cadencias_*, modelos_* | versionamento e aprovação (pendência: icps_create não incrementa versao) |
 | configuracao_update.js | trilha da configuração |
@@ -43,7 +43,7 @@
 
 ## Padrões observados
 - React + TS + Vite + Tailwind + shadcn; rotas em App.tsx; dados só por services/ ou pb.send para /backend/v1/*.
-- Hooks: lógica inline nos callbacks (VM separada); res.json para corpo HTTP; campo json lido com JSON.parse(getString()); pesos/limiares lidos do registro ativo; fila com sort nativo (teto corta antes do sort em memória).
+- Hooks: lógica inline nos callbacks (VM separada); res.json para corpo HTTP; campo json lido com JSON.parse(getString()); pesos/limiares lidos do registro ativo; fila com sort nativo (teto corta antes do sort em memória); marcador de "já processado" por fonte gravada pela própria rotina.
 - Mensagens de erro em PT-BR; toasts sonner.
 
 ## Arquivos gerados que não se editam
