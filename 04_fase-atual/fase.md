@@ -65,9 +65,10 @@ tarefas que já têm um.
   > Captação pelo CNES com os filtros do ICP (tipo de unidade, UF, município), conferida pela Receita/CNPJ (CNAE de imagem, porte, situação), com a fonte de cada dado e retomada em caso de falha.
   > SPEC-1-002 · CA-1-06, CA-1-11 · Prova: captação de uma UF e regressão de falha.
   > Concluída 14/10/2026: versão eb2114f publicada; T3 provada (t3.md: 199 organizações do CNES da UF 22 com fonte por campo, cursor sem duplicar); T9 provada (t9-regressao.md: 429 simulado adia sem perder ponto, retomada enriquece 59 orgs pela Receita).
-- [ ] Mostrar a nota de cada clínica com os motivos @"Dario Calçada" !30/10/2026 [interno]  <!-- id:34655984-df24-4fad-93d9-bdbecdc8d5e7 -->
+- [x] Mostrar a nota de cada clínica com os motivos @"Dario Calçada" !30/10/2026 [interno]  <!-- id:34655984-df24-4fad-93d9-bdbecdc8d5e7 -->
   > Pontuação pelo ICP ativo mostrando o que somou, o que tirou e o que não tinha informação; mudar o ICP repontua só quem ainda não foi abordado; e-mail pessoal ou CNPJ inativo não vira canal válido.
   > SPEC-1-002 · CA-1-09, CA-1-35, CA-1-40 · Prova: T4, T5.
+  > Concluída 15/10/2026: versão 2769b5c publicada; T4 provada (t4.md: 10/10 casos — nota explicável, canal válido, bloqueios pela natureza jurídica); T5 provada (t5.md: peso do ICP repontua); T4b (reavaliação das 199 captadas: 154 em revisão, 46 descartadas, 0 presas no descarte errado). Fila /clinicas + detalhe no ar. Navegação pós-login incluída (decisão do Igor).
 - [ ] Deixar a SDR aprovar, corrigir ou descartar clínicas @"Dario Calçada" !30/10/2026 [interno]  <!-- id:a1326b8f-c9e4-4737-9670-e0bfb26e56d9 -->
   > Na revisão, a SDR marca os sinais de LinkedIn e Instagram, aprova a clínica em revisão, corrige a nota com justificativa ou descarta com motivo; tudo fica no histórico.
   > SPEC-1-002 · CA-1-10, CA-1-41 · Prova: T7.

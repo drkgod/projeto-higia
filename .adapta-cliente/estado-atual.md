@@ -1,21 +1,21 @@
 # Estado atual — Adapta Cliente
 
 - schema_version: adapta-cliente-state/v2
-- task_id: c014826a-ea15-471e-b512-7e86ace7ffec
+- task_id: 34655984-df24-4fad-93d9-bdbecdc8d5e7
 - executor: Jarvis (ETHOS)
 - owner_informativo: Dario Calçada
 - spec: 04_fase-atual/specs/spec-1-002-captacao-e-pontuacao.md
-- analise: .adapta-cliente/analises/c014826a-ea15-471e-b512-7e86ace7ffec.md
+- analise: .adapta-cliente/analises/34655984-df24-4fad-93d9-bdbecdc8d5e7.md
 - etapa: concluida
-- autorizacao_implementacao: confirmada 2026-10-14T20:20 ("Autorizar implementação" — Igor Alves; decisão: equipamentos até 3 meses para trás, sem resposta = sem informação)
+- autorizacao_implementacao: confirmada 2026-10-15T11:09 ("Autorizar implementação" — Igor Alves; decisão: corrigir unidade_publica pela natureza jurídica, reavaliar as 199)
 - teste_humano: nao_aplicavel (ciclo completo no CL-007, SPEC-1-007)
-- verificacao_automatica: passou (QA 0.0.19–0.0.23 verde; T3: 199 organizações do CNES UF 22 com fonte por campo, cursor sem duplicar; T9: 429 simulado adia 30 sem perder ponto, retomada enriqueceu 59 pela Receita)
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-14-2340-http-json-nome-icp.md
+- verificacao_automatica: passou (QA 0.0.24–0.0.32 verde; T4 10/10 casos; T5 peso do ICP repontua; T4b 199 reavaliadas)
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-15-1440-fila-pesos.md
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: eb2114f
-- skip_publicacao: publicada:eb2114f em 2026-10-14T23:38:14Z
+- skip_versao: 2769b5c
+- skip_publicacao: publicada:2769b5c em 2026-10-15T14:37:08Z
 - pendente_github: nao
-- ultima_acao: task c014826a CONCLUÍDA (5/36) — captação CNES (199 orgs UF 22) e consulta CNPJ (59 enriquecidas) provadas
-- proxima_acao: aguardar o Igor pedir a próxima task (34655984 — pontuação explicável)
-- atualizado_em: 2026-10-14T20:45:00-03:00
+- ultima_acao: task 34655984 CONCLUÍDA (6/36) — pontuação explicável, fila /clinicas, navegação pós-login, reavaliação das 199
+- proxima_acao: aguardar o Igor pedir a próxima task (a1326b8f — revisão da SDR)
+- atualizado_em: 2026-10-15T11:45:00-03:00

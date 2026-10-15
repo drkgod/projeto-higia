@@ -6,3 +6,4 @@
 - 2026-10-14T17:10:00-03:00 · task 65b55cab · capturado: 06_notas/aprendizado-continuo/AP-2026-10-14-1710-binario-github.md · binário via MCP corrompe; caminho: upload web do cliente ou conversão para texto
 - 2026-10-14T21:05:00-03:00 · task c02b4c1d · capturado: 06_notas/aprendizado-continuo/AP-2026-10-14-2100-hs256-json-limpeza.md · hs256 (msg, segredo); json volta como string; limpeza cobre toda coleção nova
 - 2026-10-14T20:45:00-03:00 · task c014826a · capturado: 06_notas/aprendizado-continuo/AP-2026-10-14-2340-http-json-nome-icp.md · res.json no corpo HTTP; required do schema na criação por hook; parametro de ICP muda por nova versão
+- 2026-10-15T11:45:00-03:00 · task 34655984 · capturado: 06_notas/aprendizado-continuo/AP-2026-10-15-1440-fila-pesos.md · sort nativo no filtro; pesos lidos do ICP ativo; marcador por campo da própria rotina
