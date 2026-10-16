@@ -1,22 +1,22 @@
 # Estado atual — Adapta Cliente
 
 - schema_version: adapta-cliente-state/v2
-- task_id: a1326b8f-c9e4-4737-9670-e0bfb26e56d9
+- task_id: 2da63fc2-fb88-4d7d-9f6a-a25c8f6f1a4b
 - executor: Jarvis (ETHOS)
 - owner_informativo: Dario Calçada
-- spec: 04_fase-atual/specs/spec-1-002-captacao-e-pontuacao.md
-- etapa_anterior: 34655984 CONCLUÍDA (6/36)
-- analise: .adapta-cliente/analises/a1326b8f-c9e4-4737-9670-e0bfb26e56d9.md
-- etapa: concluida
-- autorizacao_implementacao: confirmada 2026-10-16T09:02 ("entao vamos pra frente") + complemento 2026-10-16T11:40 ("Autorizo" — edição de dados no painel de revisão)
-- teste_humano: nao_aplicavel (T7 + complemento provados por API; Igor/Dario conferem o painel no detalhe)
-- verificacao_automatica: passou (QA 0.0.48–0.0.50 verde; T7 + complemento: edição de dados, Receita na hora, proteções; limpeza executada)
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-16-1210-revisao-sdr.md
+- spec: 04_fase-atual/specs/spec-1-003-pipelines-e-caixa-da-sdr.md
+- etapa_anterior: a1326b8f CONCLUÍDA (7/36, com complemento de edição de dados)
+- analise: .adapta-cliente/analises/2da63fc2-fb88-4d7d-9f6a-a25c8f6f1a4b.md
+- etapa: aguardando_autorizacao
+- autorizacao_implementacao: ausente
+- teste_humano: pendente (Igor/Dario conferem a oportunidade criada ao aprovar)
+- verificacao_automatica: pendente
+- aprendizado: pendente
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: b30e4fc
-- skip_publicacao: publicada:b30e4fc em 2026-10-16T14:41:46Z
+- skip_versao: 55aed02
+- skip_publicacao: publicada:55aed02 em 2026-10-16T16:35:39Z
 - pendente_github: nao
-- ultima_acao: complemento da a1326b8f CONCLUÍDO — edição de dados (CNPJ com Receita na hora, equipamentos fonte SDR, contato da empresa) + repontuação na hora
-- proxima_acao: aguardar o Igor pedir a próxima task (2da63fc2 — oportunidade na pipeline, SPEC-1-003)
-- atualizado_em: 2026-10-16T11:50:00-03:00
+- ultima_acao: análise de 2da63fc2 (oportunidade na pipeline) concluída — migration 0008 (oportunidades+atividades), criação automática ao virar acionável, fila de entrada RN-02 com limite (padrão 10), T9
+- proxima_acao: aguardar autorização do Igor para implementar
+- atualizado_em: 2026-10-16T13:55:00-03:00
