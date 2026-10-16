@@ -1,22 +1,22 @@
 # Estado atual — Adapta Cliente
 
 - schema_version: adapta-cliente-state/v2
-- task_id: 1cc6e53d-bb74-43b2-9bcc-12cfd0d9ae26
+- task_id: b43ce6d9-9fb3-49cd-b8b5-c01643698c19
 - executor: Jarvis (ETHOS)
 - owner_informativo: Dario Calçada
 - spec: 04_fase-atual/specs/spec-1-003-pipelines-e-caixa-da-sdr.md
-- etapa_anterior: 2da63fc2 CONCLUÍDA (8/36)
-- analise: .adapta-cliente/analises/1cc6e53d-bb74-43b2-9bcc-12cfd0d9ae26.md
+- etapa_anterior: 1cc6e53d CONCLUÍDA (9/36)
+- analise: .adapta-cliente/analises/b43ce6d9-9fb3-49cd-b8b5-c01643698c19.md
 - etapa: aguardando_teste_humano
-- autorizacao_implementacao: confirmada 2026-10-16T14:38 ("pode" — Igor Alves)
-- teste_humano: pendente (SPEC declara teste humano não aplicável nesta task — ciclo completo no CL-007; Igor/Dario conferem o agendamento da T7 no ar)
-- verificacao_automatica: passou (QA 0.0.56–0.0.58; T1: 11 passos nas datas certas + feriado pulado; T4: idempotência 2ª rodada 0 novos; T6: pausa geral e nada vencido em lote; limpeza executada)
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-16-1750-cadencia-motor.md
+- autorizacao_implementacao: confirmada 2026-10-16T14:57 ("pode" — Igor Alves)
+- teste_humano: pendente (SPEC declara teste humano não aplicável nesta SPEC — ciclo completo no CL-007; Igor/Dario conferem as provas T2/T3/T7/T10)
+- verificacao_automatica: passou (QA 0.0.59–0.0.61; T2: resposta pausa e cancela 8/8 com tarefa; T3: optout + HMAC supressao + reativação recusada; T7: resposta automática retoma rodada 2 reagendada, recusa nunca; T10: regressão T1/T2 ok; limpeza executada)
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-16-1810-datetime-vazio.md
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: ec3274b
-- skip_publicacao: publicada:ec3274b em 2026-10-16T17:41:59Z
+- skip_versao: 9e1d302
+- skip_publicacao: publicada:9e1d302 em 2026-10-16T18:01:43Z
 - pendente_github: nao
-- ultima_acao: task 1cc6e53d implementada e publicada (9/36) — motor da cadência no ar com provas T1/T4/T6
-- proxima_acao: aguardar conferência do Igor/Dario e pedido de conclusão; depois, b43ce6d9 (parar a cadência quando responder)
-- atualizado_em: 2026-10-16T17:55:00-03:00
+- ultima_acao: task b43ce6d9 implementada e publicada (10/36) — pausa por resposta no ar com provas T2/T3/T7/T10
+- proxima_acao: aguardar conferência do Igor/Dario e pedido de conclusão; depois, b19368a9 (caixa de trabalho da SDR)
+- atualizado_em: 2026-10-16T18:15:00-03:00

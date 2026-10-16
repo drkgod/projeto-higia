@@ -82,9 +82,10 @@ tarefas que já têm um.
   > Passos agendados a partir do D1 em dias úteis, sem feriados e dentro da janela; e-mail e WhatsApp viram envios, ligação e LinkedIn viram tarefas; pausa geral segura tudo e nada vencido sai em lote.
   > SPEC-1-003 · CA-1-12, CA-1-15, CA-1-17 · Prova: T1, T4, T6.
   > Concluída 16/10/2026: versão ec3274b publicada; T1 provada (t1.md: 11 passos nas datas certas, feriado pulado na T1b — D2 19/10→20/10); T4 provada (t4.md: 2ª rodada 0 novos, chave de idempotência); T6 provada (t6.md: pausa geral não agenda nada, nada vencido sai em lote). Migration 0009 (envios + tarefas), hook cadencia_motor (cron 15 min, RN-03 + RN-06 esgotamento), rota de teste rodar/cadencia.
-- [ ] Parar a cadência quando a clínica responder @"Dario Calçada" !06/11/2026 [interno]  <!-- id:b43ce6d9-9fb3-49cd-b8b5-c01643698c19 -->
+- [x] Parar a cadência quando a clínica responder @"Dario Calçada" !06/11/2026 [interno]  <!-- id:b43ce6d9-9fb3-49cd-b8b5-c01643698c19 -->
   > Resposta, recusa ou opt-out em qualquer canal cancela os envios agendados e em andamento dos dois canais e cria tarefa para a SDR. A SDR marca o tipo da resposta; resposta automática retoma em nova rodada, recusa nunca.
   > SPEC-1-003 · CA-1-13, CA-1-14, CA-1-36 · Prova: T2, T3, T7, T10.
+  > Concluída 16/10/2026: versão 9e1d302 publicada; T2 provada (t2.md: resposta pausa, 8/8 cancelados, tarefa resposta, motor não agenda para pausado, idempotência); T3 provada (t3.md: optout no contato + HMAC em supressao + reativação recusada); T7 provada (t7.md: resposta_automatica retoma rodada 2 com passos reagendados a partir do próximo dia útil; recusa nunca retoma); T10 provada (t10-regressao.md: T1 e T2 repetidos com mesmos resultados). Hook resposta_entrada (rotas atividade-entrada, resposta/{id}/tipo, oportunidade/{id}/reativar), migration 0010 (retomada_em), motor usa retomada_em.
 - [ ] Abrir a caixa de trabalho da SDR @"Dario Calçada" !06/11/2026 [interno]  <!-- id:b19368a9-bb07-4c27-a355-307347148e3a -->
   > Respostas, tarefas vencidas, ligações e LinkedIn do dia, retornos, revisões e duplicidades, na ordem de prioridade e com o motivo, só da carteira da SDR; ligação registrada com a categoria do resultado.
   > SPEC-1-003 · CA-1-16, CA-1-37, CA-1-38 · Prova: T5, T8.

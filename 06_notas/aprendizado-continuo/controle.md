@@ -10,3 +10,4 @@
 - 2026-10-16T09:10:00-03:00 · task a1326b8f · capturado: 06_notas/aprendizado-continuo/AP-2026-10-16-1210-revisao-sdr.md · ação de papel restrito por rota que grava como servidor; marcador protege estado de rotina automática
 - 2026-10-16T14:10:00-03:00 · task 2da63fc2 · capturado: 06_notas/aprendizado-continuo/AP-2026-10-16-1400-oportunidade.md · registro semeado sem required corrige por hook; e-mail com emailVisibility=false não é filtrável
 - 2026-10-16T17:50:00-03:00 · task 1cc6e53d · capturado: 06_notas/aprendizado-continuo/AP-2026-10-16-1750-cadencia-motor.md · lógica inline em callback (VM separada); relation usa collectionId real do projeto
+- 2026-10-16T18:10:00-03:00 · task b43ce6d9 · capturado: 06_notas/aprendizado-continuo/AP-2026-10-16-1810-datetime-vazio.md · date vazio lê-se como string; nunca-retoma força o estado; teste de cadência precisa de contato
