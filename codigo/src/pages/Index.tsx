@@ -1,4 +1,4 @@
 // src/pages/Index.tsx — home (espelho)
-// Task b19368a9 + correção 0b77a68: card "Caixa de trabalho" (Inbox), card "Clínicas" ÚNICO
-// (o duplicado da versão anterior foi removido) e card "Administração" para admin/gestor.
-// (Espelho — conteúdo completo no projeto Skip 62151, versão 0b77a68.)
+// Task b19368a9 + correções: card Caixa, card Clínicas único, card Administração com
+// botão padrão (sem variant outline — d7f6adf).
+// (Espelho — conteúdo completo no projeto Skip 62151, versão d7f6adf.)
