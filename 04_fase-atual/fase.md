@@ -78,9 +78,10 @@ tarefas que já têm um.
   > Clínica acionável vira oportunidade na pipeline do ICP com a SDR como responsável; entra na cadência pela fila do dia, por ordem de nota, até o limite diário de entrada.
   > SPEC-1-003 · CA-1-12, CA-1-43 · Prova: T1, T9.
   > Concluída 16/10/2026: versão 879cb9d publicada; T9 provada (t9.md: 30 acionáveis, limite 10, ativas por ordem de nota 100→82, 20 aguardando); T9b (criação automática na aprovação com pipeline/etapa/responsável/cadência corretos, idempotente, atividade sistema). Migration 0008 (oportunidades + atividades); fila de entrada RN-02 (cron 07:00 Brasília dias úteis, limite padrão 10 da Q-13); e-mail da SDR corrigido (maria.jesus@higiatec.com.br, informado pelo Igor).
-- [ ] Agendar os passos da cadência sem repetir envios @"Dario Calçada" !05/11/2026 [interno]  <!-- id:1cc6e53d-bb74-43b2-9bcc-12cfd0d9ae26 -->
+- [x] Agendar os passos da cadência sem repetir envios @"Dario Calçada" !05/11/2026 [interno]  <!-- id:1cc6e53d-bb74-43b2-9bcc-12cfd0d9ae26 -->
   > Passos agendados a partir do D1 em dias úteis, sem feriados e dentro da janela; e-mail e WhatsApp viram envios, ligação e LinkedIn viram tarefas; pausa geral segura tudo e nada vencido sai em lote.
   > SPEC-1-003 · CA-1-12, CA-1-15, CA-1-17 · Prova: T1, T4, T6.
+  > Concluída 16/10/2026: versão ec3274b publicada; T1 provada (t1.md: 11 passos nas datas certas, feriado pulado na T1b — D2 19/10→20/10); T4 provada (t4.md: 2ª rodada 0 novos, chave de idempotência); T6 provada (t6.md: pausa geral não agenda nada, nada vencido sai em lote). Migration 0009 (envios + tarefas), hook cadencia_motor (cron 15 min, RN-03 + RN-06 esgotamento), rota de teste rodar/cadencia.
 - [ ] Parar a cadência quando a clínica responder @"Dario Calçada" !06/11/2026 [interno]  <!-- id:b43ce6d9-9fb3-49cd-b8b5-c01643698c19 -->
   > Resposta, recusa ou opt-out em qualquer canal cancela os envios agendados e em andamento dos dois canais e cria tarefa para a SDR. A SDR marca o tipo da resposta; resposta automática retoma em nova rodada, recusa nunca.
   > SPEC-1-003 · CA-1-13, CA-1-14, CA-1-36 · Prova: T2, T3, T7, T10.
