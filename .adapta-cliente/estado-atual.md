@@ -8,15 +8,15 @@
 - etapa_anterior: 34655984 CONCLUÍDA (6/36)
 - analise: .adapta-cliente/analises/a1326b8f-c9e4-4737-9670-e0bfb26e56d9.md
 - etapa: concluida
-- autorizacao_implementacao: confirmada 2026-10-16T09:02 ("entao vamos pra frente" — Igor Alves)
-- teste_humano: nao_aplicavel (T7 provada por API; Igor/Dario conferem o painel de ações no detalhe)
-- verificacao_automatica: passou (QA 0.0.48–0.0.49 verde; T7 provada: correção de nota, sinais, aprovação, bloqueios; limpeza executada)
+- autorizacao_implementacao: confirmada 2026-10-16T09:02 ("entao vamos pra frente") + complemento 2026-10-16T11:40 ("Autorizo" — edição de dados no painel de revisão)
+- teste_humano: nao_aplicavel (T7 + complemento provados por API; Igor/Dario conferem o painel no detalhe)
+- verificacao_automatica: passou (QA 0.0.48–0.0.50 verde; T7 + complemento: edição de dados, Receita na hora, proteções; limpeza executada)
 - aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-16-1210-revisao-sdr.md
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: 0ae88a5
-- skip_publicacao: publicada:0ae88a5 em 2026-10-16T12:04:05Z
+- skip_versao: b30e4fc
+- skip_publicacao: publicada:b30e4fc em 2026-10-16T14:41:46Z
 - pendente_github: nao
-- ultima_acao: task a1326b8f CONCLUÍDA (7/36) — revisão da SDR com painel de ações e histórico no detalhe
+- ultima_acao: complemento da a1326b8f CONCLUÍDO — edição de dados (CNPJ com Receita na hora, equipamentos fonte SDR, contato da empresa) + repontuação na hora
 - proxima_acao: aguardar o Igor pedir a próxima task (2da63fc2 — oportunidade na pipeline, SPEC-1-003)
-- atualizado_em: 2026-10-16T09:10:00-03:00
+- atualizado_em: 2026-10-16T11:50:00-03:00
