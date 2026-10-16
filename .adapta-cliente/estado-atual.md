@@ -7,16 +7,16 @@
 - spec: 04_fase-atual/specs/spec-1-002-captacao-e-pontuacao.md
 - etapa_anterior: 34655984 CONCLUÍDA (6/36)
 - analise: .adapta-cliente/analises/a1326b8f-c9e4-4737-9670-e0bfb26e56d9.md
-- etapa: aguardando_autorizacao
-- autorizacao_implementacao: ausente
-- teste_humano: nao_aplicavel (T7 é prova automática; Igor/Dario conferem o painel de ações)
-- verificacao_automatica: pendente
-- aprendizado: pendente
+- etapa: concluida
+- autorizacao_implementacao: confirmada 2026-10-16T09:02 ("entao vamos pra frente" — Igor Alves)
+- teste_humano: nao_aplicavel (T7 provada por API; Igor/Dario conferem o painel de ações no detalhe)
+- verificacao_automatica: passou (QA 0.0.48–0.0.49 verde; T7 provada: correção de nota, sinais, aprovação, bloqueios; limpeza executada)
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-16-1210-revisao-sdr.md
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: 3151f61
-- skip_publicacao: publicada:3151f61 em 2026-10-15T20:37:49Z
+- skip_versao: 0ae88a5
+- skip_publicacao: publicada:0ae88a5 em 2026-10-16T12:04:05Z
 - pendente_github: nao
-- ultima_acao: análise de a1326b8f (revisão da SDR) concluída — rota de ação + painel no detalhe + histórico; RN-12/RN-14; T7
-- proxima_acao: aguardar autorização do Igor para implementar
-- atualizado_em: 2026-10-16T09:05:00-03:00
+- ultima_acao: task a1326b8f CONCLUÍDA (7/36) — revisão da SDR com painel de ações e histórico no detalhe
+- proxima_acao: aguardar o Igor pedir a próxima task (2da63fc2 — oportunidade na pipeline, SPEC-1-003)
+- atualizado_em: 2026-10-16T09:10:00-03:00

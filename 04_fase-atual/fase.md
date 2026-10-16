@@ -68,10 +68,11 @@ tarefas que já têm um.
 - [x] Mostrar a nota de cada clínica com os motivos @"Dario Calçada" !30/10/2026 [interno]  <!-- id:34655984-df24-4fad-93d9-bdbecdc8d5e7 -->
   > Pontuação pelo ICP ativo mostrando o que somou, o que tirou e o que não tinha informação; mudar o ICP repontua só quem ainda não foi abordado; e-mail pessoal ou CNPJ inativo não vira canal válido.
   > SPEC-1-002 · CA-1-09, CA-1-35, CA-1-40 · Prova: T4, T5.
-  > Concluída 15/10/2026: versão 2769b5c publicada; T4 provada (t4.md: 10/10 casos — nota explicável, canal válido, bloqueios pela natureza jurídica); T5 provada (t5.md: peso do ICP repontua); T4b (reavaliação das 199 captadas: 154 em revisão, 46 descartadas, 0 presas no descarte errado). Fila /clinicas + detalhe no ar. Navegação pós-login incluída (decisão do Igor).
-- [ ] Deixar a SDR aprovar, corrigir ou descartar clínicas @"Dario Calçada" !30/10/2026 [interno]  <!-- id:a1326b8f-c9e4-4737-9670-e0bfb26e56d9 -->
+  > Concluída 15/10/2026: versão 2769b5c publicada; T4 provada (t4.md: 10/10 casos — nota explicável, canal válido, bloqueios pela natureza jurídica); T5 provada (t5.md: peso do ICP repontua); T4b (reavaliação das 199 captadas: 154 em revisão, 46 descartadas, 0 presas no descarte errado). Fila /clinicas + detalhe no ar. Navegação pós-login incluída (decisão do Igor). Correções pós-revisão do Igor: navegação, layout, enriquecimento Receita (231 com porte/CNAE), UF como sigla, coluna Origem, paginação com seletor, município por nome (versão final 3151f61).
+- [x] Deixar a SDR aprovar, corrigir ou descartar clínicas @"Dario Calçada" !30/10/2026 [interno]  <!-- id:a1326b8f-c9e4-4737-9670-e0bfb26e56d9 -->
   > Na revisão, a SDR marca os sinais de LinkedIn e Instagram, aprova a clínica em revisão, corrige a nota com justificativa ou descarta com motivo; tudo fica no histórico.
   > SPEC-1-002 · CA-1-10, CA-1-41 · Prova: T7.
+  > Concluída 16/10/2026: versão 0ae88a5 publicada; T7 provada (t7.md: correção de nota com justificativa em alteracoes, sinais, aprovação em_revisao→acionavel, bloqueios sem justificativa e de acionável). Painel de ações + histórico no detalhe /clinica/:id. Nota corrigida pela SDR protegida da repontuação (motivo_status=correcao_sdr).
 - [ ] Criar a oportunidade quando a clínica for aprovada @"Dario Calçada" !04/11/2026 [interno]  <!-- id:2da63fc2-fb88-4d7d-9f6a-a25c8f6f1a4b -->
   > Clínica acionável vira oportunidade na pipeline do ICP com a SDR como responsável; entra na cadência pela fila do dia, por ordem de nota, até o limite diário de entrada.
   > SPEC-1-003 · CA-1-12, CA-1-43 · Prova: T1, T9.
