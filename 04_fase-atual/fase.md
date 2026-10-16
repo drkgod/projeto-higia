@@ -86,9 +86,10 @@ tarefas que já têm um.
   > Resposta, recusa ou opt-out em qualquer canal cancela os envios agendados e em andamento dos dois canais e cria tarefa para a SDR. A SDR marca o tipo da resposta; resposta automática retoma em nova rodada, recusa nunca.
   > SPEC-1-003 · CA-1-13, CA-1-14, CA-1-36 · Prova: T2, T3, T7, T10.
   > Concluída 16/10/2026: versão 9e1d302 publicada; T2 provada (t2.md: resposta pausa, 8/8 cancelados, tarefa resposta, motor não agenda para pausado, idempotência); T3 provada (t3.md: optout no contato + HMAC em supressao + reativação recusada); T7 provada (t7.md: resposta_automatica retoma rodada 2 com passos reagendados a partir do próximo dia útil; recusa nunca retoma); T10 provada (t10-regressao.md: T1 e T2 repetidos com mesmos resultados). Hook resposta_entrada (rotas atividade-entrada, resposta/{id}/tipo, oportunidade/{id}/reativar), migration 0010 (retomada_em), motor usa retomada_em.
-- [ ] Abrir a caixa de trabalho da SDR @"Dario Calçada" !06/11/2026 [interno]  <!-- id:b19368a9-bb07-4c27-a355-307347148e3a -->
+- [x] Abrir a caixa de trabalho da SDR @"Dario Calçada" !06/11/2026 [interno]  <!-- id:b19368a9-bb07-4c27-a355-307347148e3a -->
   > Respostas, tarefas vencidas, ligações e LinkedIn do dia, retornos, revisões e duplicidades, na ordem de prioridade e com o motivo, só da carteira da SDR; ligação registrada com a categoria do resultado.
   > SPEC-1-003 · CA-1-16, CA-1-37, CA-1-38 · Prova: T5, T8.
+  > Concluída 16/10/2026: versão f5fb573 publicada; T5 provada (t5.md: duas SDRs veem só a própria carteira, na ordem); T8 provada (t8.md: ligação sem categoria → 400; com categoria grava + feita; LinkedIn com mensagem do modelo aprovado). Tela /caixa + card na home; rotas ligacao/tarefa/alerta; corrigido o alerta de exclusão (campos mensagem/responsavel/status) e o campo do modelo do motor (corpo, não conteudo).
 - [ ] Mostrar as pipelines com o histórico de cada clínica @"Dario Calçada" !06/11/2026 [interno]  <!-- id:6d68f7ab-b0fc-4720-85ae-a4b3fb82c244 -->
   > Telas de pipeline (quadro e lista) e da oportunidade com todas as atividades e mudanças de etapa, da lista até o fechamento.
   > SPEC-1-003 · CA-1-12 · Prova: T1 e captura das telas.

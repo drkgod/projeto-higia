@@ -11,3 +11,4 @@
 - 2026-10-16T14:10:00-03:00 · task 2da63fc2 · capturado: 06_notas/aprendizado-continuo/AP-2026-10-16-1400-oportunidade.md · registro semeado sem required corrige por hook; e-mail com emailVisibility=false não é filtrável
 - 2026-10-16T17:50:00-03:00 · task 1cc6e53d · capturado: 06_notas/aprendizado-continuo/AP-2026-10-16-1750-cadencia-motor.md · lógica inline em callback (VM separada); relation usa collectionId real do projeto
 - 2026-10-16T18:10:00-03:00 · task b43ce6d9 · capturado: 06_notas/aprendizado-continuo/AP-2026-10-16-1810-datetime-vazio.md · date vazio lê-se como string; nunca-retoma força o estado; teste de cadência precisa de contato
+- 2026-10-16T18:30:00-03:00 · task b19368a9 · capturado: 06_notas/aprendizado-continuo/AP-2026-10-16-1830-caixa-alerta-modelo.md · escrita em schema errado dentro de try/catch falha em silêncio; campo de modelo é corpo
