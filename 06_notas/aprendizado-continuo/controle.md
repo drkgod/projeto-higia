@@ -8,3 +8,4 @@
 - 2026-10-14T20:45:00-03:00 · task c014826a · capturado: 06_notas/aprendizado-continuo/AP-2026-10-14-2340-http-json-nome-icp.md · res.json no corpo HTTP; required do schema na criação por hook; parametro de ICP muda por nova versão
 - 2026-10-15T11:45:00-03:00 · task 34655984 · capturado: 06_notas/aprendizado-continuo/AP-2026-10-15-1440-fila-pesos.md · sort nativo no filtro; pesos lidos do ICP ativo; marcador por campo da própria rotina
 - 2026-10-16T09:10:00-03:00 · task a1326b8f · capturado: 06_notas/aprendizado-continuo/AP-2026-10-16-1210-revisao-sdr.md · ação de papel restrito por rota que grava como servidor; marcador protege estado de rotina automática
+- 2026-10-16T14:10:00-03:00 · task 2da63fc2 · capturado: 06_notas/aprendizado-continuo/AP-2026-10-16-1400-oportunidade.md · registro semeado sem required corrige por hook; e-mail com emailVisibility=false não é filtrável

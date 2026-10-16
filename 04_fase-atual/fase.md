@@ -73,9 +73,11 @@ tarefas que já têm um.
   > Na revisão, a SDR marca os sinais de LinkedIn e Instagram, aprova a clínica em revisão, corrige a nota com justificativa ou descarta com motivo; tudo fica no histórico.
   > SPEC-1-002 · CA-1-10, CA-1-41 · Prova: T7.
   > Concluída 16/10/2026: versão 0ae88a5 publicada; T7 provada (t7.md: correção de nota com justificativa em alteracoes, sinais, aprovação em_revisao→acionavel, bloqueios sem justificativa e de acionável). Painel de ações + histórico no detalhe /clinica/:id. Nota corrigida pela SDR protegida da repontuação (motivo_status=correcao_sdr).
-- [ ] Criar a oportunidade quando a clínica for aprovada @"Dario Calçada" !04/11/2026 [interno]  <!-- id:2da63fc2-fb88-4d7d-9f6a-a25c8f6f1a4b -->
+  > Complemento autorizado pelo Igor 16/10 11:40 (b30e4fc): edição de dados no painel — CNPJ (consulta Receita na hora), equipamentos (fonte informado_sdr), e-mail/telefone/site; repontuação na hora; fonte SDR protegida da rodada diária. Provas em t7.md (complemento).
+- [x] Criar a oportunidade quando a clínica for aprovada @"Dario Calçada" !04/11/2026 [interno]  <!-- id:2da63fc2-fb88-4d7d-9f6a-a25c8f6f1a4b -->
   > Clínica acionável vira oportunidade na pipeline do ICP com a SDR como responsável; entra na cadência pela fila do dia, por ordem de nota, até o limite diário de entrada.
   > SPEC-1-003 · CA-1-12, CA-1-43 · Prova: T1, T9.
+  > Concluída 16/10/2026: versão 879cb9d publicada; T9 provada (t9.md: 30 acionáveis, limite 10, ativas por ordem de nota 100→82, 20 aguardando); T9b (criação automática na aprovação com pipeline/etapa/responsável/cadência corretos, idempotente, atividade sistema). Migration 0008 (oportunidades + atividades); fila de entrada RN-02 (cron 07:00 Brasília dias úteis, limite padrão 10 da Q-13); e-mail da SDR corrigido (maria.jesus@higiatec.com.br, informado pelo Igor).
 - [ ] Agendar os passos da cadência sem repetir envios @"Dario Calçada" !05/11/2026 [interno]  <!-- id:1cc6e53d-bb74-43b2-9bcc-12cfd0d9ae26 -->
   > Passos agendados a partir do D1 em dias úteis, sem feriados e dentro da janela; e-mail e WhatsApp viram envios, ligação e LinkedIn viram tarefas; pausa geral segura tudo e nada vencido sai em lote.
   > SPEC-1-003 · CA-1-12, CA-1-15, CA-1-17 · Prova: T1, T4, T6.

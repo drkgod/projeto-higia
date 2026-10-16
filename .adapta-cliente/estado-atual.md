@@ -7,16 +7,16 @@
 - spec: 04_fase-atual/specs/spec-1-003-pipelines-e-caixa-da-sdr.md
 - etapa_anterior: a1326b8f CONCLUÍDA (7/36, com complemento de edição de dados)
 - analise: .adapta-cliente/analises/2da63fc2-fb88-4d7d-9f6a-a25c8f6f1a4b.md
-- etapa: aguardando_autorizacao
-- autorizacao_implementacao: ausente
-- teste_humano: pendente (Igor/Dario conferem a oportunidade criada ao aprovar)
-- verificacao_automatica: pendente
-- aprendizado: pendente
+- etapa: concluida
+- autorizacao_implementacao: confirmada 2026-10-16T13:54 ("autorizo" — Igor Alves) + e-mail da SDR informado: maria.jesus@higiatec.com.br
+- teste_humano: pendente (Igor/Dario conferem a oportunidade criada ao aprovar uma clínica real)
+- verificacao_automatica: passou (QA 0.0.53–0.0.55 verde; T9: 30 acionáveis, limite 10 por nota; T9b: criação automática + idempotência; limpeza executada)
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-16-1400-oportunidade.md
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: 55aed02
-- skip_publicacao: publicada:55aed02 em 2026-10-16T16:35:39Z
+- skip_versao: 879cb9d
+- skip_publicacao: publicada:879cb9d em 2026-10-16T16:56:18Z
 - pendente_github: nao
-- ultima_acao: análise de 2da63fc2 (oportunidade na pipeline) concluída — migration 0008 (oportunidades+atividades), criação automática ao virar acionável, fila de entrada RN-02 com limite (padrão 10), T9
-- proxima_acao: aguardar autorização do Igor para implementar
-- atualizado_em: 2026-10-16T13:55:00-03:00
+- ultima_acao: task 2da63fc2 CONCLUÍDA (8/36) — oportunidade automática na pipeline + fila de entrada com limite
+- proxima_acao: aguardar o Igor pedir a próxima task (1cc6e53d — motor da cadência, SPEC-1-003)
+- atualizado_em: 2026-10-16T14:10:00-03:00
