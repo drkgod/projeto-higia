@@ -9,14 +9,14 @@
 - analise: .adapta-cliente/analises/b19368a9-bb07-4c27-a355-307347148e3a.md
 - etapa: aguardando_teste_humano
 - autorizacao_implementacao: confirmada 2026-10-16T15:18 ("pode" — Igor Alves)
-- teste_humano: pendente (correções do teste aplicadas até 15:44 — caixa carrega ao abrir, Início, botão padrão, e erro de carregamento corrigido: sort inválido removido; 7763206)
-- verificacao_automatica: passou (QA 0.0.62–0.0.68; T5/T8; alerta de exclusão; correções do teste; consulta da caixa responde 200 sem o sort inválido)
+- teste_humano: pendente (correções do teste aplicadas até 15:48 — caixa carrega ao abrir, Início, botão padrão, erro de carregamento corrigido e botão voltar leva para onde veio; 6d8d768)
+- verificacao_automatica: passou (QA 0.0.62–0.0.69; T5/T8; alerta de exclusão; correções do teste; consulta da caixa 200)
 - aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-16-1830-caixa-alerta-modelo.md
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: 7763206
-- skip_publicacao: publicada:7763206 em 2026-10-16T18:46:28Z
+- skip_versao: 6d8d768
+- skip_publicacao: publicada:6d8d768 em 2026-10-16T18:54:34Z
 - pendente_github: nao
-- ultima_acao: task b19368a9 implementada e publicada (11/36) — caixa no ar; correções do teste: card duplicado, carregamento ao abrir, Início, botão padrão e sort inválido de atividades (7763206)
+- ultima_acao: task b19368a9 implementada e publicada (11/36) — caixa no ar; correções do teste: card duplicado, carregamento, Início, botão padrão, sort de atividades e volta da clínica para onde veio (6d8d768)
 - proxima_acao: aguardar conferência visual do Igor/Dario na home e /caixa e pedido de conclusão; depois, 6d68f7ab (pipelines)
-- atualizado_em: 2026-10-16T15:45:00-03:00
+- atualizado_em: 2026-10-16T15:53:00-03:00
