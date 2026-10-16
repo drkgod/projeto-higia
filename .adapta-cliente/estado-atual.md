@@ -9,14 +9,14 @@
 - analise: .adapta-cliente/analises/b19368a9-bb07-4c27-a355-307347148e3a.md
 - etapa: aguardando_teste_humano
 - autorizacao_implementacao: confirmada 2026-10-16T15:18 ("pode" — Igor Alves)
-- teste_humano: pendente (caixa é tela nova — conferência visual no ar + CL-007)
-- verificacao_automatica: passou (QA 0.0.62–0.0.65; T5: duas SDRs veem só a própria carteira; T8: ligação sem categoria 400, com categoria grava+feita, LinkedIn com mensagem do modelo; alerta de exclusão gravado; limpeza executada)
+- teste_humano: pendente (correção visual do card duplicado aplicada 15:37 — 0b77a68; Igor/Dario conferem a home e a /caixa)
+- verificacao_automatica: passou (QA 0.0.62–0.0.66; T5: duas SDRs veem só a própria carteira; T8: ligação sem categoria 400, com categoria grava+feita, LinkedIn com mensagem do modelo; alerta de exclusão gravado; card Clínicas duplicado corrigido; limpeza executada)
 - aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-16-1830-caixa-alerta-modelo.md
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: f5fb573
-- skip_publicacao: publicada:f5fb573 em 2026-10-16T18:30:25Z
+- skip_versao: 0b77a68
+- skip_publicacao: publicada:0b77a68 em 2026-10-16T18:38:19Z
 - pendente_github: nao
-- ultima_acao: task b19368a9 implementada e publicada (11/36) — caixa de trabalho no ar com provas T5/T8
-- proxima_acao: aguardar conferência visual do Igor/Dario na /caixa e pedido de conclusão; depois, 6d68f7ab (pipelines)
-- atualizado_em: 2026-10-16T15:32:00-03:00
+- ultima_acao: task b19368a9 implementada e publicada (11/36) — caixa de trabalho no ar; correção do card Clínicas duplicado (0b77a68)
+- proxima_acao: aguardar conferência visual do Igor/Dario na home e /caixa e pedido de conclusão; depois, 6d68f7ab (pipelines)
+- atualizado_em: 2026-10-16T15:38:00-03:00
