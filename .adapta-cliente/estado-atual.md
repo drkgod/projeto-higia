@@ -1,22 +1,22 @@
 # Estado atual — Adapta Cliente
 
 - schema_version: adapta-cliente-state/v2
-- task_id: b19368a9-bb07-4c27-a355-307347148e3a
+- task_id: 6d68f7ab-b0fc-4720-85ae-a4b3fb82c244
 - executor: Jarvis (ETHOS)
 - owner_informativo: Dario Calçada
 - spec: 04_fase-atual/specs/spec-1-003-pipelines-e-caixa-da-sdr.md
-- etapa_anterior: b43ce6d9 CONCLUÍDA (10/36)
-- analise: .adapta-cliente/analises/b19368a9-bb07-4c27-a355-307347148e3a.md
-- etapa: aguardando_teste_humano
-- autorizacao_implementacao: confirmada 2026-10-16T15:18 ("pode" — Igor Alves)
-- teste_humano: pendente (correções do teste aplicadas até 15:48 — caixa carrega ao abrir, Início, botão padrão, erro de carregamento corrigido e botão voltar leva para onde veio; 6d8d768)
+- etapa_anterior: b19368a9 CONCLUÍDA (11/36)
+- analise: .adapta-cliente/analises/6d68f7ab-b0fc-4720-85ae-a4b3fb82c244.md (pronta)
+- etapa: aguardando_autorizacao
+- autorizacao_implementacao: pendente (análise da 6d68f7ab)
+- teste_humano: aprovado pelo Igor em 2026-10-16 17:21 (caixa + volta para a caixa; 6d8d768)
 - verificacao_automatica: passou (QA 0.0.62–0.0.69; T5/T8; alerta de exclusão; correções do teste; consulta da caixa 200)
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-16-1830-caixa-alerta-modelo.md
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-16-1920-rede-pipeline.md
 - sistema: CRM_Higia
 - skip_projeto: 62151
 - skip_versao: 6d8d768
 - skip_publicacao: publicada:6d8d768 em 2026-10-16T18:54:34Z
 - pendente_github: nao
-- ultima_acao: task b19368a9 implementada e publicada (11/36) — caixa no ar; correções do teste: card duplicado, carregamento, Início, botão padrão, sort de atividades e volta da clínica para onde veio (6d8d768)
-- proxima_acao: aguardar conferência visual do Igor/Dario na home e /caixa e pedido de conclusão; depois, 6d68f7ab (pipelines)
-- atualizado_em: 2026-10-16T15:53:00-03:00
+- ultima_acao: b19368a9 CONCLUÍDA (11/36) com teste aprovado; decisão do Igor registrada: 1 oportunidade por REDE (razão social), não por unidade — entra na análise da 6d68f7ab
+- proxima_acao: apresentar análise da 6d68f7ab ao Igor e aguardar autorização de implementação
+- atualizado_em: 2026-10-16T17:25:00-03:00
