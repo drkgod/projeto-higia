@@ -1,21 +1,22 @@
 # Estado atual — Adapta Cliente
 
 - schema_version: adapta-cliente-state/v2
-- task_id: 34655984-df24-4fad-93d9-bdbecdc8d5e7
+- task_id: a1326b8f-c9e4-4737-9670-e0bfb26e56d9
 - executor: Jarvis (ETHOS)
 - owner_informativo: Dario Calçada
 - spec: 04_fase-atual/specs/spec-1-002-captacao-e-pontuacao.md
-- analise: .adapta-cliente/analises/34655984-df24-4fad-93d9-bdbecdc8d5e7.md
-- etapa: concluida
-- autorizacao_implementacao: confirmada 2026-10-15T11:09 ("Autorizar implementação" — Igor Alves; decisão: corrigir unidade_publica pela natureza jurídica, reavaliar as 199)
-- teste_humano: nao_aplicavel (ciclo completo no CL-007, SPEC-1-007)
-- verificacao_automatica: passou (QA 0.0.24–0.0.47 verde; T4 10/10 casos; T5 peso do ICP repontua; T4b 199 reavaliadas; correções pós-revisão do Igor provadas por API)
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-15-1440-fila-pesos.md
+- etapa_anterior: 34655984 CONCLUÍDA (6/36)
+- analise: .adapta-cliente/analises/a1326b8f-c9e4-4737-9670-e0bfb26e56d9.md
+- etapa: aguardando_autorizacao
+- autorizacao_implementacao: ausente
+- teste_humano: nao_aplicavel (T7 é prova automática; Igor/Dario conferem o painel de ações)
+- verificacao_automatica: pendente
+- aprendizado: pendente
 - sistema: CRM_Higia
 - skip_projeto: 62151
 - skip_versao: 3151f61
 - skip_publicacao: publicada:3151f61 em 2026-10-15T20:37:49Z
 - pendente_github: nao
-- ultima_acao: task 34655984 CONCLUÍDA (6/36) + correções pós-revisão do Igor (navegação, layout, enriquecimento Receita, UF sigla, origem, paginação, município por nome) — versão final 3151f61
-- proxima_acao: aguardar o Igor pedir a próxima task (a1326b8f — revisão da SDR)
-- atualizado_em: 2026-10-16T08:50:00-03:00
+- ultima_acao: análise de a1326b8f (revisão da SDR) concluída — rota de ação + painel no detalhe + histórico; RN-12/RN-14; T7
+- proxima_acao: aguardar autorização do Igor para implementar
+- atualizado_em: 2026-10-16T09:05:00-03:00
