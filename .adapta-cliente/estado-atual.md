@@ -9,13 +9,13 @@
 - etapa: concluida
 - autorizacao_implementacao: confirmada 2026-10-15T11:09 ("Autorizar implementação" — Igor Alves; decisão: corrigir unidade_publica pela natureza jurídica, reavaliar as 199)
 - teste_humano: nao_aplicavel (ciclo completo no CL-007, SPEC-1-007)
-- verificacao_automatica: passou (QA 0.0.24–0.0.39 verde; T4 10/10 casos; T5 peso do ICP repontua; T4b 199 reavaliadas; enriquecimento provado: 231 com porte/CNAE)
+- verificacao_automatica: passou (QA 0.0.24–0.0.47 verde; T4 10/10 casos; T5 peso do ICP repontua; T4b 199 reavaliadas; correções pós-revisão do Igor provadas por API)
 - aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-15-1440-fila-pesos.md
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: f03cc8d
-- skip_publicacao: publicada:f03cc8d em 2026-10-15T19:31:23Z
+- skip_versao: 3151f61
+- skip_publicacao: publicada:3151f61 em 2026-10-15T20:37:49Z
 - pendente_github: nao
-- ultima_acao: diagnóstico da fila (pergunta do Igor) + correções do enriquecimento (filtro por fonte, mapeamento BrasilAPI, case ATIVA/Ativa, reavaliação das descartadas)
-- proxima_acao: aguardar o Igor pedir a próxima task (a1326b8f — revisão da SDR); equipamentos completam nas rodadas diárias (~7 dias)
-- atualizado_em: 2026-10-15T16:40:00-03:00
+- ultima_acao: task 34655984 CONCLUÍDA (6/36) + correções pós-revisão do Igor (navegação, layout, enriquecimento Receita, UF sigla, origem, paginação, município por nome) — versão final 3151f61
+- proxima_acao: aguardar o Igor pedir a próxima task (a1326b8f — revisão da SDR)
+- atualizado_em: 2026-10-16T08:50:00-03:00
