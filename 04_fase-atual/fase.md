@@ -100,12 +100,14 @@ tarefas que já têm um.
 - [ ] Conectar o serviço de e-mail no domínio novo @"Dario Calçada" !23/10/2026 [interno]  <!-- id:292512cc-34cd-4fe8-ba9d-6ead07350eea -->
   > Domínio separado comprado na semana 1 para aquecer; conta no serviço escolhido na Q-15; DNS e subdomínio de respostas; chaves e token digitados pelo Dario nos segredos do Skip; canal ligado só depois do e-mail de teste entregue.
   > SPEC-1-004 · CA-1-18 · Prova: T7.
-- [ ] Enviar os e-mails da cadência com saída para descadastro @"Dario Calçada" !10/11/2026 [interno]  <!-- id:b4713315-e071-4865-b655-07e305aba201 -->
+- [/] Enviar os e-mails da cadência com saída para descadastro @"Dario Calçada" !10/11/2026 [interno]  <!-- id:b4713315-e071-4865-b655-07e305aba201 -->
   > Envios com o modelo aprovado, conferência de pausa, contato e supressão logo antes de enviar, limite diário, janela, modo de teste e descadastro com confirmação.
   > SPEC-1-004 · CA-1-19, CA-1-20, CA-1-44 · Prova: T1, T2, T4, T8.
-- [ ] Registrar respostas e rejeições de e-mail no CRM @"Dario Calçada" !11/11/2026 [interno]  <!-- id:0329c5bb-8acc-4dc1-b683-3cde08473c8f -->
+  > Código implementado e provado em modo de teste 20/10 (05_entregas/fase-1/spec-1-004/t1.md: T1–T4 — remetente com conferência, resposta RN-04, descadastro RN-05 com HMAC na supressão, bounce marca e-mail inválido); falta o SMTP do serviço (Dario) para as provas de entrega real.
+- [/] Registrar respostas e rejeições de e-mail no CRM @"Dario Calçada" !11/11/2026 [interno]  <!-- id:0329c5bb-8acc-4dc1-b683-3cde08473c8f -->
   > Eventos do serviço só valem depois de conferidos no próprio serviço; resposta pausa a cadência; rejeição marca o e-mail inválido; reputação ruim desliga o canal; silêncio do webhook gera alerta.
   > SPEC-1-004 · CA-1-21, CA-1-46 · Prova: T3, T5, T6, T8.
+  > Webhook de entrada implementado e provado em modo de teste 20/10 (t1.md: resposta pausa e cancela; descadastro grava opt-out + HMAC na supressão e nunca retoma; bounce marca e-mail inválido). Falta o webhook real do serviço apontando para o backend.
 - [x] Escolher a API e o número de WhatsApp da cadência @"Dario Calçada" !16/10/2026 [interno]  <!-- id:1cf2d10d-b3ef-4e4c-82f8-f394f5d43376 -->
   > O Maestro lê para o Dario a consequência de cada opção (Uazapi: primeiro contato frio com risco de banimento do número; oficial da Meta: só quem deu consentimento) e registra a escolha, o número dedicado e o de acordo do Igor. O número começa a aquecer na semana 1.
   > SPEC-1-005 · CA-1-22 · Entrega: 06_notas/decisao-whatsapp.md.
