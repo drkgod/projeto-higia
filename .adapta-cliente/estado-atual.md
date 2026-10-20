@@ -1,20 +1,20 @@
 # Estado atual — Adapta Cliente
 
 - schema_version: adapta-cliente-state/v2
-- task_id: SPEC-1-005 (whatsapp-uazapi) — código
+- task_id: SPEC-1-004 (email) — código
 - executor: Jarvis (ETHOS)
 - owner_informativo: Dario Calçada
-- spec: 04_fase-atual/specs (SPEC-1-005; decisões em 06_notas/decisao-whatsapp.md)
+- spec: 04_fase-atual/specs (SPEC-1-004; domínio em 06_notas/decisao-whatsapp.md)
 - etapa: codigo_implementado_e_provado — aguardando canal (Dario)
-- autorizacao_implementacao: confirmada 2026-10-20 ("autorizo" — Igor Alves)
-- teste_humano: provas T1–T6 por API em modo de teste (05_entregas/fase-1/spec-1-005/t1.md); teste de entrega real só após segredos/número
-- verificacao_automatica: passou (QA 0.0.78–0.0.82 verde; versão final 4779a2b publicada)
-- aprendizado: capturado (HMAC $security.hs256(valor, chave); rotas de hook sem /api; 1 routerAdd por arquivo)
+- autorizacao_implementacao: confirmada 2026-10-20 ("pode seguir" — Igor Alves)
+- teste_humano: provas T1–T4 por API em modo de teste (05_entregas/fase-1/spec-1-004/t1.md); teste de entrega real só após SMTP/DNS
+- verificacao_automatica: passou (QA 0.0.83–0.0.85 verde; versão final 726b246 publicada)
+- aprendizado: capturado (mail client do PocketBase; HMAC $security.hs256(valor, chave); rotas de hook sem /api)
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: 4779a2b (0.0.82)
-- skip_publicacao: publicada:4779a2b em 2026-10-20T16:13:44Z
-- pendente_github: fase.md (marcadores [/] das 2 tasks) e changelog — sincronizar ao ligar o canal
-- ultima_acao: SPEC-1-005 implementada e provada em modo de teste (remetente + webhook de entrada); limpeza executada; fila real intacta
-- proxima_acao: Dario ligar o canal (número dedicado, segredos UAZAPI_TOKEN/UAZAPI_URL, webhook, aquecimento); depois provas de entrega real (T7/T8) e SPEC-1-004 (e-mail)
-- atualizado_em: 2026-10-20T13:20:00-03:00
+- skip_versao: 726b246 (0.0.85)
+- skip_publicacao: publicada:726b246 em 2026-10-20T17:58:11Z
+- pendente_github: fase.md (marcadores [/] das 2 tasks de e-mail), STATUS e changelog — sincronizar
+- ultima_acao: SPEC-1-004 implementada e provada em modo de teste (remetente + webhook de entrada); limpeza executada; fila real intacta
+- proxima_acao: Dario ligar os canais (e-mail: conta+DNS+SMTP; WhatsApp: número+segredos+webhook); depois provas de entrega real (T7/T8)
+- atualizado_em: 2026-10-20T15:00:00-03:00
