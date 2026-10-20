@@ -106,9 +106,10 @@ tarefas que já têm um.
 - [ ] Registrar respostas e rejeições de e-mail no CRM @"Dario Calçada" !11/11/2026 [interno]  <!-- id:0329c5bb-8acc-4dc1-b683-3cde08473c8f -->
   > Eventos do serviço só valem depois de conferidos no próprio serviço; resposta pausa a cadência; rejeição marca o e-mail inválido; reputação ruim desliga o canal; silêncio do webhook gera alerta.
   > SPEC-1-004 · CA-1-21, CA-1-46 · Prova: T3, T5, T6, T8.
-- [ ] Escolher a API e o número de WhatsApp da cadência @"Dario Calçada" !16/10/2026 [interno]  <!-- id:1cf2d10d-b3ef-4e4c-82f8-f394f5d43376 -->
+- [x] Escolher a API e o número de WhatsApp da cadência @"Dario Calçada" !16/10/2026 [interno]  <!-- id:1cf2d10d-b3ef-4e4c-82f8-f394f5d43376 -->
   > O Maestro lê para o Dario a consequência de cada opção (Uazapi: primeiro contato frio com risco de banimento do número; oficial da Meta: só quem deu consentimento) e registra a escolha, o número dedicado e o de acordo do Igor. O número começa a aquecer na semana 1.
   > SPEC-1-005 · CA-1-22 · Entrega: 06_notas/decisao-whatsapp.md.
+  > Concluída 20/10/2026: Igor decidiu Uazapi (risco de banimento em contato frio aceito; mitigação = número dedicado + aquecimento). Número dedicado a comprar pelo Dario; entrega em 06_notas/decisao-whatsapp.md.
 - [ ] Conectar o número de WhatsApp da cadência @"Dario Calçada" !04/11/2026 [interno]  <!-- id:c4366a83-e88b-47cd-a98b-04455ccae0bc -->
   > Número dedicado ligado à API escolhida; segredos e webhook configurados pelo Dario; canal ligado só depois da mensagem de teste nos dois sentidos.
   > SPEC-1-005 · CA-1-23 · Prova: T8.
