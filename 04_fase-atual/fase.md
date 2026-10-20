@@ -113,12 +113,14 @@ tarefas que já têm um.
 - [ ] Conectar o número de WhatsApp da cadência @"Dario Calçada" !04/11/2026 [interno]  <!-- id:c4366a83-e88b-47cd-a98b-04455ccae0bc -->
   > Número dedicado ligado à API escolhida; segredos e webhook configurados pelo Dario; canal ligado só depois da mensagem de teste nos dois sentidos.
   > SPEC-1-005 · CA-1-23 · Prova: T8.
-- [ ] Enviar as mensagens de WhatsApp da cadência @"Dario Calçada" !10/11/2026 [interno]  <!-- id:837ab8fa-becf-44d6-8034-53a20728e57a -->
+- [/] Enviar as mensagens de WhatsApp da cadência @"Dario Calçada" !10/11/2026 [interno]  <!-- id:837ab8fa-becf-44d6-8034-53a20728e57a -->
   > Envios com o modelo aprovado, conferência logo antes de enviar, limite por número, janela, intervalo entre mensagens e modo de teste; no caminho Meta, quem não deu consentimento vira tarefa da SDR.
   > SPEC-1-005 · CA-1-24, CA-1-45 · Prova: T1, T2, T3, T9.
-- [ ] Registrar as respostas de WhatsApp no CRM @"Dario Calçada" !11/11/2026 [interno]  <!-- id:22a305e2-3ea7-4e95-b472-f747c983d084 -->
+  > Código implementado e provado em modo de teste 20/10 (05_entregas/fase-1/spec-1-005/t1.md: T1–T6 — remetente Uazapi com conferência, eco, resposta RN-04, SAIR RN-05 com HMAC na supressão, número inválido); falta ligar o canal (segredos e número do Dario) para as provas de entrega real.
+- [/] Registrar as respostas de WhatsApp no CRM @"Dario Calçada" !11/11/2026 [interno]  <!-- id:22a305e2-3ea7-4e95-b472-f747c983d084 -->
   > Resposta entra no histórico e pausa a cadência; SAIR bloqueia a pessoa para sempre; eco ignorado; número sem WhatsApp marcado inválido; silêncio do webhook gera alerta.
   > SPEC-1-005 · CA-1-25, CA-1-47 · Prova: T4, T5, T6, T7, T9.
+  > Webhook de entrada implementado e provado em modo de teste 20/10 (t1.md: resposta pausa e cancela; SAIR grava opt-out + HMAC na supressão e nunca retoma; eco ignorado; número sem WhatsApp marcado inválido). Falta o webhook real da Uazapi apontando para o backend.
 - [ ] Trazer as licitações do PNCP para a pipeline pública @"Dario Calçada" !28/10/2026 [interno]  <!-- id:5534b6ad-1773-4d9b-8d0c-916a245a6687 -->
   > Consulta diária da API pública do PNCP por modalidade, com filtro de palavras e estados feito no sistema (Q-16), sem repetir edital e respeitando o limite de chamadas.
   > SPEC-1-006 · CA-1-26, CA-1-27 · Prova: T1, T2, T3, T6.
