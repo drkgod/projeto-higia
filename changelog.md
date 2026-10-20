@@ -168,7 +168,7 @@
 - Hook resposta_entrada: rota atividade-entrada (RN-04: pausa, cancela agendado/enviando de todos os canais, tarefa resposta 1×), rota resposta/{id}/tipo (RN-08: interesse/retorno_pedido → tarefa retorno D+1; recusa/optout → RN-05 opt-out no contato + HMAC em supressao + pausado para sempre; exclusao → alerta exclusao_pedida; resposta_automatica → RN-07 rodada+1, ativo, retomada_em), rota oportunidade/{id}/reativar (RN-07 pela SDR com justificativa; recusa/optout/exclusao nunca retoma).
 - Motor (cadencia_motor): base de datas passa a usar retomada_em quando preenchida (reagenda passos restantes da nova rodada mantendo intervalos).
 - Correções durante a prova: getDateTime de campo vazio quebrava new Date (ler string); recusa/optout/exclusao forçam pausado e cancelam pendentes mesmo após retomada; gancho semear cria contato principal de teste (opt-out precisa de contato).
-- Provas: t2.md (resposta pausa, 8/8 cancelados, tarefa, motor não agenda, idempotência), t3.md (optout + supressão HMAC + reativação recusada), t7.md (resposta automática retoma rodada 2 com reagendamento; recusa nunca), t10-regressao.md (T1/T2 repetidos). Limpeza executada; fila real intacta.
+- Provas: t2.md (resposta pausa, 8/8 cancelados, tarefa, motor não agenda, idempotência), t3.md (optout + supressão HMAC + reativação recusada), t7.md (resposta automática retoma rodada 2 com reagendamento; recusa nunca retoma), t10-regressao.md (T1/T2 repetidos). Limpeza executada; fila real intacta.
 - Aprendizado: AP-2026-10-16-1810-datetime-vazio.md.
 - 16/10/2026 · Jarvis (ETHOS) · Task b43ce6d9 concluída (teste humano não aplicável pela SPEC; ciclo completo no CL-007).
 
@@ -232,3 +232,18 @@
 - Provas T1–T4 contra o backend real (t1.md) — todas verdes.
 - Limpeza executada; gancho de teste removido. Versão final 726b246 (0.0.85).
 - Pendências do Dario para ligar: conta do serviço de e-mail + DNS do subdomínio (SPF/DKIM/DMARC), SMTP do projeto, webhook do serviço → <backend>/backend/v1/email/entrada, limite_diario_email (default 50), ligar canal_email_ativo só após teste de entrega.
+
+## 20/10/2026 · Jarvis (ETHOS) · SPEC-1-006 CONCLUÍDA (14/36, 15/36, 16/36)
+
+- Autorizada pelo Igor ("autorizo"). Q-16 decidida pelo Igor (06_notas/decisao-q16-filtro-pncp.md): palavras PACS/RIS/telerradiologia/radiologia/raio-x/tomografia/ultrassonografia/mamógrafo/laudo; modalidades 6,4,7,5 (dispensa nunca); UFs todas.
+- Migration 0012 oportunidades_publicas; hook pncp_consulta (cron 10:00 UTC, cursor em importacoes com campos reais estado/cursor, 429/204, RN-01..05); hook pncp_triagem (RN-06); tela /publico + card na home.
+- Provas T1–T6 verdes (t1.md): 14 oportunidades reais de 14/10 (incluindo PI ultrassonografia); idempotência (criadas:0 na 2ª consulta); falha real com cursor+alerta; triagem com motivo obrigatório; filtro sem match não cria; lista vazia não roda + alerta.
+- Aprendizado: build falho (0.0.88) não regenera o manifesto de hooks — rota nova dava 404 até tocar o arquivo e reaplicar (0.0.91/0.0.92). Versão final 3de24ba.
+
+## 20/10/2026 · Jarvis (ETHOS) · SPEC-1-007 implementada (painel no ar; teste do ciclo pendente)
+
+- Autorizado pelo Igor ("Pode começar"). Q-18 a Q-21 respondidas no formulário: mínimo 30 efetivos/100 (Q-18); linha de base 2h/dia via CNES+contatos manuais+lista da empresa (Q-19/Q-20); teste do ciclo com WhatsApp do Igor 86 99493-2757 e e-mail a criar pelo Dario (Q-21).
+- Rota agregada GET /backend/v1/painel (9 indicadores com definição fixa, sem registros teste=true; teste=1 só admin; sdr vê só os próprios números) + tela /painel + card na home.
+- Linha de base registrada (RN-01) em configuracao.linha_de_base com autor, data e marca "declarado"; amostra_minima=30.
+- Provas T2/T3/T4/T5 verdes (t2-green.md): fixture com 12+3 oportunidades bateu os 9 indicadores esperados (12/10/10/9/6/3/30/4/1); veredito "amostra insuficiente" com 30 e "no mínimo ou acima" com 10; recálculo de contato_efetivo provado; linha de base no retorno. Fixture e gancho de teste removidos.
+- Versão final 1f5d09d (0.0.106). Pendências: teste do ciclo (CL-007, Dario+Igor), liberação dos envios reais (RN-03), fechamento com veredito (RN-04).
