@@ -143,7 +143,7 @@
 
 - Autorizada às 13:54 ("autorizo" — Igor Alves) com o e-mail da SDR: maria.jesus@higiatec.com.br (corrigido no cadastro via gancho — o registro semeado estava sem e-mail e o PATCH via API recusa).
 - Versões 0.0.53–0.0.55 (82c1ace, 075afe2, 879cb9d) publicadas; QA verde.
-- Migration 0008: coleções oportunidades (índice único parcial: uma ativa por organização) e atividades (provedor_id único); regras: sdr vê/edita as suas, admin/gestor tudo, criação só por hooks/admin.
+- Migration 0008: coleções oportunidades (índice único parcial: uma ativa por organização) e atividades (provedor_id único); regras: sdr vê/edita as suas, admin/gestor tudo, licitacao nada; criação só por hooks/admin.
 - Criação automática (RN-01): ao virar acionável (pontuação OU aprovação da SDR), cria oportunidade na pipeline do ICP (etapa "Lista de Leads"), responsável = primeira SDR ativa não-teste, contato principal, cadência ativa + versão, estado_contato=aguardando, rodada 1; idempotente; atividade sistema registra (RN-10).
 - Fila de entrada (RN-02): cron fila_entrada_diaria 0 10 * * 1-5 (07:00 Brasília, dias úteis; feriado pela lista); ativa aguardando por ordem de nota até limite_diario_entrada_cadencia (padrão 10 da Q-13 com alerta se ausente); rota de teste /backend/v1/teste/fila-entrada.
 - Provas T9 (t9.md): 30 acionáveis → 10 ativas por nota (100→82), 20 aguardando; T9b: aprovação cria oportunidade com campos corretos + atividade sistema; idempotência provada (1 oportunidade por organização).
