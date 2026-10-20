@@ -7,16 +7,16 @@
 - spec: 04_fase-atual/specs/spec-1-003-pipelines-e-caixa-da-sdr.md
 - etapa_anterior: b19368a9 CONCLUÍDA (12/36)
 - analise: .adapta-cliente/analises/6d68f7ab-b0fc-4720-85ae-a4b3fb82c244.md (pronta)
-- etapa: implementada — aguardando_teste_humano
+- etapa: concluida
 - autorizacao_implementacao: confirmada 2026-10-20 ("Autorizar implementação da 6d68f7ab" — Igor Alves)
-- teste_humano: pendente (teste visual das telas /pipeline, /pipeline/:id e /oportunidade/:id; dados de teste no ar — REDE TESTE T1 + CLINICA UNICA T1)
-- verificacao_automatica: passou (QA 0.0.70–0.0.74 verde; prova T1 P1–P9 por API em 05_entregas/fase-1/spec-1-003/t1-telas.md; telas capturadas e verificadas)
+- teste_humano: aprovado 2026-10-20 ("Está funcional a tela" — Igor Alves); decisão: identidade visual fica para task própria (design depois)
+- verificacao_automatica: passou (QA 0.0.70–0.0.77 verde; prova T1 P1–P9 por API em 05_entregas/fase-1/spec-1-003/t1-telas.md; telas capturadas e verificadas)
 - aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-20-1400-rotas-hooks.md
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: bd9fd62 (0.0.74)
-- skip_publicacao: publicada:bd9fd62 em 2026-10-20T14:04:16Z
-- pendente_github: changelog.md e STATUS.md (sync na conclusão, junto com a marcação da task)
-- ultima_acao: 6d68f7ab implementada e provada (T1 P1–P9 verdes) — telas /pipeline, /pipeline/:id e /oportunidade/:id com agrupamento por rede, RN-10, nota, Perdido com motivo e reativação; migration 0011 (datas do histórico)
-- proxima_acao: teste visual do Igor; depois limpeza dos dados de teste, changelog/STATUS no GitHub e conclusão da task (13/36)
-- atualizado_em: 2026-10-20T11:15:00-03:00
+- skip_versao: c92d1fd (0.0.77)
+- skip_publicacao: publicada:c92d1fd em 2026-10-20T14:28:47Z
+- pendente_github: nenhum — fase.md/STATUS/changelog sincronizados na conclusão
+- ultima_acao: 6d68f7ab CONCLUÍDA (13/36) — teste do Igor aprovado, correção de sessão expirada (f4e3ea9), limpeza executada (3 orgs/3 ops/13 atividades apagadas; usuários de teste desativados; gancho t1 removido) e registros fechados no repo
+- proxima_acao: task nova de identidade visual (decisão do Igor: design depois); próxima task funcional do fase.md (e-mail da cadência — SPEC-1-004)
+- atualizado_em: 2026-10-20T11:35:00-03:00
