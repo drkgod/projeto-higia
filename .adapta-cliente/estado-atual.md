@@ -14,7 +14,7 @@
 - skip_projeto: 62151
 - skip_versao: 1f5d09d (0.0.106)
 - skip_publicacao: publicada:1f5d09d em 2026-10-20T19:35Z
-- pendente_github: fase.md/STATUS/changelog — sincronizar na próxima rodada (t2-green/estado/questionário já sincronizados)
+- pendente_github: fase.md (task do painel [x]) e changelog (seção 007) — sincronizar na próxima rodada (STATUS/t2-green/estado/questionário já sincronizados)
 - ultima_acao: SPEC-1-007 implementada e provada; fixture e gancho de teste removidos; painel só leitura no ar
 - proxima_acao: teste do ciclo (Dario+Igor, precisa e-mail do teste) → liberação dos envios reais (RN-03) → fechamento com veredito (RN-04); canais 004/005 aguardando o Dario
-- atualizado_em: 2026-10-20T16:40:00-03:00
+- atualizado_em: 2026-10-20T16:45:00-03:00
