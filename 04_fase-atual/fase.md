@@ -135,9 +135,10 @@ tarefas que já têm um.
   > Palavras, modalidades e estados editáveis no admin, com efeito na consulta seguinte; lista de palavras vazia não roda e gera alerta.
   > SPEC-1-006 · CA-1-29 · Prova: T5.
   > Concluída 20/10/2026: configuracao.pncp (palavras/modalidades/UFs) editável; T5 verde (palavra sem match não cria; lista vazia não roda + alerta).
-- [ ] Montar o painel do piloto @"Dario Calçada" !12/11/2026 [interno]  <!-- id:e45e573d-7e0a-4e67-8852-7be68332fe04 -->
+- [x] Montar o painel do piloto @"Dario Calçada" !12/11/2026 [interno]  <!-- id:e45e573d-7e0a-4e67-8852-7be68332fe04 -->
   > Nove indicadores com definição fixa por pipeline e período, sem dados de teste, comparando contatos efetivos a cada 100 com o mínimo da Higia; abaixo da amostra mínima mostra amostra insuficiente.
   > SPEC-1-007 · CA-1-30, CA-1-32 · Prova: T1 a T4.
+  > Concluída 20/10/2026: rota agregada /backend/v1/painel + tela /painel com os 9 indicadores, veredito e linha de base declarada; T2/T3/T4/T5 verdes em 05_entregas/fase-1/spec-1-007/t2-green.md (fixture com valores conhecidos, apagada no fim). Q-18=30, Q-19/Q-20 registradas, Q-21 WhatsApp do Igor.
 - [ ] Registrar a linha de base antes do primeiro envio @"Igor Alves" !12/11/2026 [interno]  <!-- id:0807ad81-e074-4867-a55b-cea8f766cc5d -->
   > Igor registra como a SDR trabalha hoje (Q-19 e Q-20) antes de liberar os envios reais.
   > SPEC-1-007 · CA-1-31 · Prova: T5.
