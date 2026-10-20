@@ -1,20 +1,21 @@
 # Estado atual — Adapta Cliente
 
 - schema_version: adapta-cliente-state/v2
-- task_id: SPEC-1-004 (email) — código
+- task_id: SPEC-1-006 (licitacoes-pncp) — concluída
 - executor: Jarvis (ETHOS)
 - owner_informativo: Dario Calçada
-- spec: 04_fase-atual/specs (SPEC-1-004; domínio em 06_notas/decisao-whatsapp.md)
-- etapa: codigo_implementado_e_provado — aguardando canal (Dario)
-- autorizacao_implementacao: confirmada 2026-10-20 ("pode seguir" — Igor Alves)
-- teste_humano: provas T1–T4 por API em modo de teste (05_entregas/fase-1/spec-1-004/t1.md); teste de entrega real só após SMTP/DNS
-- verificacao_automatica: passou (QA 0.0.83–0.0.85 verde; versão final 726b246 publicada)
-- aprendizado: capturado (mail client do PocketBase; HMAC $security.hs256(valor, chave); rotas de hook sem /api)
+- spec: 04_fase-atual/specs/spec-1-006-licitacoes-do-pncp.md
+- etapa: concluida (16/36)
+- autorizacao_implementacao: confirmada 2026-10-20 ("autorizo" — Igor Alves)
+- decisoes: Q-16 (filtro) decidida pelo Igor em 06_notas/decisao-q16-filtro-pncp.md; Q-17 (Igor e Dario triam)
+- teste_humano: provas T1–T6 por API (05_entregas/fase-1/spec-1-006/t1.md); tela /publico no ar
+- verificacao_automatica: QA verde (0.0.86–0.0.92); versão final 3de24ba
+- aprendizado: build falho não regenera manifesto de hooks — tocar arquivo + reaplicar
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: 726b246 (0.0.85)
-- skip_publicacao: publicada:726b246 em 2026-10-20T17:58:11Z
-- pendente_github: fase.md (marcadores [/] das 2 tasks de e-mail), STATUS e changelog — sincronizar
-- ultima_acao: SPEC-1-004 implementada e provada em modo de teste (remetente + webhook de entrada); limpeza executada; fila real intacta
-- proxima_acao: Dario ligar os canais (e-mail: conta+DNS+SMTP; WhatsApp: número+segredos+webhook); depois provas de entrega real (T7/T8)
-- atualizado_em: 2026-10-20T15:00:00-03:00
+- skip_versao: 3de24ba (0.0.92)
+- skip_publicacao: publicada:3de24ba em 2026-10-20T18:48Z
+- pendente_github: fase.md (3 tasks marcadas [x]) e changelog — sincronizar na próxima rodada (STATUS/t1/decisão-q16/estado já sincronizados)
+- ultima_acao: SPEC-1-006 concluída (consulta diária PNCP + pipeline pública + triagem)
+- proxima_acao: SPEC-1-007 (painel do piloto) — pedir autorização; canais 004/005 aguardando o Dario
+- atualizado_em: 2026-10-20T16:00:00-03:00
