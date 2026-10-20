@@ -143,7 +143,7 @@
 
 - Autorizada às 13:54 ("autorizo" — Igor Alves) com o e-mail da SDR: maria.jesus@higiatec.com.br (corrigido no cadastro via gancho — o registro semeado estava sem e-mail e o PATCH via API recusa).
 - Versões 0.0.53–0.0.55 (82c1ace, 075afe2, 879cb9d) publicadas; QA verde.
-- Migration 0008: coleções oportunidades (índice único parcial: uma ativa por organização) e atividades (provedor_id único); regras: sdr vê/edita as suas, admin/gestor tudo, licitacao nada; criação só por hooks/admin.
+- Migration 0008: coleções oportunidades (índice único parcial: uma ativa por organização) e atividades (provedor_id único); regras: sdr vê/edita as suas, admin/gestor tudo, criação só por hooks/admin.
 - Criação automática (RN-01): ao virar acionável (pontuação OU aprovação da SDR), cria oportunidade na pipeline do ICP (etapa "Lista de Leads"), responsável = primeira SDR ativa não-teste, contato principal, cadência ativa + versão, estado_contato=aguardando, rodada 1; idempotente; atividade sistema registra (RN-10).
 - Fila de entrada (RN-02): cron fila_entrada_diaria 0 10 * * 1-5 (07:00 Brasília, dias úteis; feriado pela lista); ativa aguardando por ordem de nota até limite_diario_entrada_cadencia (padrão 10 da Q-13 com alerta se ausente); rota de teste /backend/v1/teste/fila-entrada.
 - Provas T9 (t9.md): 30 acionáveis → 10 ativas por nota (100→82), 20 aguardando; T9b: aprovação cria oportunidade com campos corretos + atividade sistema; idempotência provada (1 oportunidade por organização).
@@ -187,3 +187,48 @@
 - 16/10/2026 · Jarvis (ETHOS) · Melhoria do teste: abrir a clínica pela caixa e voltar agora retorna à caixa (não à fila). Botão de volta usa o lugar de origem (6d8d768).
 - 16/10/2026 · Jarvis (ETHOS) · Task b19368a9 CONCLUÍDA (12/36): teste humano aprovado pelo Igor (caixa carrega, volta para a caixa funciona). Versão final 6d8d768.
 - 16/10/2026 · Jarvis (ETHOS) · DECISÃO DO CLIENTE: 1 oportunidade por rede (mesma razão social), não por unidade — grupos de clínicas (ex.: Bioanálise/Sabin, 17 unidades) entram como um cliente só na pipeline.
+
+## 20/10/2026 · Jarvis (ETHOS) · Task 6d68f7ab IMPLEMENTADA (13/36) — telas de pipeline e oportunidade
+
+- Autorizada pelo Igor às 10:47 ("Autorizar implementação da 6d68f7ab").
+- Versões 0.0.70–0.0.74 (093515a…bd9fd62) publicadas; QA verde (0.0.71+; 0.0.70 falhou por colisão de nome Pipelines admin/tela — corrigido com alias).
+- Migration 0011_datas_historico: criado_em em atividades + created/updated em oportunidades (coleções sem campo de data — histórico e listas sem ordem).
+- Tela /pipeline: pipelines privadas com contagem por etapa e AGRUPAMENTO POR REDE (decisão do Igor 16/10) — "3 oportunidades · 2 redes", badge de unidades, expandir unidades.
+- Tela /pipeline/:id: quadro Kanban por etapa com cards por rede e select de etapa; alternância Quadro/Lista; Perdido exige motivo da lista da pipeline.
+- Tela /oportunidade/:id: dados, ações (nota + mover etapa) e histórico completo em abas (atividades com etapa_de/etapa_para, envios, tarefas).
+- Hooks: oportunidade_etapa.js (RN-10: valida etapa na pipeline, Perdido exige motivo, esgota cadência e cancela envios; sair de Perdido reativa com retomada_em) e oportunidade_nota.js — 1 rota por arquivo (regra da plataforma).
+- Card "Pipelines" na home; caixa linka respostas e tarefas para a oportunidade.
+- Prova T1 (t1-telas.md): P1–P9 verdes por API; telas capturadas e verificadas por visão. Dados de teste no ar (limpeza na conclusão). Fila real intacta.
+- Aprendizado: AP-2026-10-20-1400 (rotas sem /api; 1 routerAdd por arquivo; delete de hook exige 2× apply).
+
+## 20/10/2026 · Jarvis (ETHOS) · Task 6d68f7ab CONCLUÍDA (13/36)
+
+- Teste visual do Igor aprovado ("Está funcional a tela"); decisão: identidade visual fica para task própria (design depois).
+- Correção pós-teste (f4e3ea9): sessão expirada não aparece mais como "nenhuma pipeline" — o serviço detecta 401/403, limpa a sessão e pede relogin.
+- Limpeza executada (c92d1fd): 3 organizações, 3 oportunidades e 13 atividades de teste apagadas; 5 usuários de teste desativados; gancho teste_t1_pipeline.js removido; teste/limpar agora cobre oportunidades, atividades, envios e tarefas.
+- fase.md marcado como concluída; prova em 05_entregas/fase-1/spec-1-003/t1-telas.md.
+
+## 20/10/2026 · Jarvis (ETHOS) · Decisões Q-14 e Q-15 registradas
+
+- Igor decidiu: WhatsApp via **Uazapi** (risco de banimento em contato frio aceito; mitigação = número dedicado + aquecimento) e e-mails pelo subdomínio dedicado **outbound.higiatec.com.br**.
+- Q-14 marcada concluída no fase.md (13/36 → incluída; decisão em 06_notas/decisao-whatsapp.md); SPEC-1-005 destravada para implementação.
+- Q-15 resolvida (subdomínio); falta serviço de e-mail, DNS e segredos — tarefas do Dario (23/10).
+- Pendências do Dario listadas em 06_notas/decisao-whatsapp.md (número, token, webhook, DNS, segredos, aquecimento).
+
+## 20/10/2026 · Jarvis (ETHOS) · SPEC-1-005 implementada (código pronto, canal pendente)
+
+- Autorizado pelo Igor ("autorizo") após a decisão Q-14 (Uazapi).
+- Remetente (cron 15 min): envios `agendado` do canal whatsapp vencidos → conferência de envio (inline) → Uazapi (`/chat/send/text`, Bearer) com modelo aprovado e variáveis; enviado/falhou (3 tentativas) com atividade de saída e provedor_id; sem credenciais não processa nada; alerta `silencio_webhook` (saída há 24h+ sem entrada).
+- Webhook de entrada `POST /backend/v1/whatsapp/uazapi` (SEM /api): eco ignorado; SAIR → RN-05 (opt-out + HMAC `$security.hs256` na supressão, nunca retoma); "não temo whatsapp" → `whatsapp_invalido` + tarefa; resposta → RN-04 (pausa, cancela os dois canais, tarefa resposta). Verificação opcional X-Webhook-Secret.
+- Provas T1–T6 contra o backend real (t1.md) — todas verdes; HMAC corrigido na prova (API certa: `$security.hs256(valor, chave)`).
+- Limpeza executada; gancho de teste removido. Versão final 4779a2b (0.0.82).
+- Pendências do Dario para ligar: número dedicado + aquecimento; segredos UAZAPI_TOKEN/UAZAPI_URL (e WHATSAPP_WEBHOOK_SEGREDO opcional); webhook da Uazapi → <backend>/backend/v1/whatsapp/uazapi; `limite_diario_whatsapp` (default 50) e `destinatarios_permitidos` em modo de teste; ligar `canal_whatsapp_ativo` só após teste de entrega.
+
+## 20/10/2026 · Jarvis (ETHOS) · SPEC-1-004 implementada (código pronto, canal pendente)
+
+- Autorizado pelo Igor ("pode seguir") após a decisão do domínio (outbound.higiatec.com.br).
+- Remetente (cron 15 min): envios `agendado` do canal email vencidos → conferência de envio (inline) → envio com modelo aprovado via $app.newMailClient() (SMTP do projeto); assunto+corpo com variáveis; enviado/falhou (3 tentativas) com atividade de saída; sem SMTP não processa nada (log sem_smtp_configurado); alerta silencio_webhook.
+- Webhook de entrada `POST /backend/v1/email/entrada` (SEM /api): resposta → RN-04 (pausa, cancela os dois canais, tarefa); descadastro → RN-05 (optout_email + HMAC na supressão, nunca retoma); bounce → email_invalido + tarefa. Verificação opcional X-Webhook-Secret.
+- Provas T1–T4 contra o backend real (t1.md) — todas verdes.
+- Limpeza executada; gancho de teste removido. Versão final 726b246 (0.0.85).
+- Pendências do Dario para ligar: conta do serviço de e-mail + DNS do subdomínio (SPF/DKIM/DMARC), SMTP do projeto, webhook do serviço → <backend>/backend/v1/email/entrada, limite_diario_email (default 50), ligar canal_email_ativo só após teste de entrega.
