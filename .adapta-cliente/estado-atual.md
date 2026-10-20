@@ -1,21 +1,20 @@
 # Estado atual — Adapta Cliente
 
 - schema_version: adapta-cliente-state/v2
-- task_id: SPEC-1-006 (licitacoes-pncp) — concluída
+- task_id: SPEC-1-007 (painel-do-piloto) — implementada
 - executor: Jarvis (ETHOS)
 - owner_informativo: Dario Calçada
-- spec: 04_fase-atual/specs/spec-1-006-licitacoes-do-pncp.md
-- etapa: concluida (16/36)
-- autorizacao_implementacao: confirmada 2026-10-20 ("autorizo" — Igor Alves)
-- decisoes: Q-16 (filtro) decidida pelo Igor em 06_notas/decisao-q16-filtro-pncp.md; Q-17 (Igor e Dario triam)
-- teste_humano: provas T1–T6 por API (05_entregas/fase-1/spec-1-006/t1.md); tela /publico no ar
-- verificacao_automatica: QA verde (0.0.86–0.0.92); versão final 3de24ba
-- aprendizado: build falho não regenera manifesto de hooks — tocar arquivo + reaplicar
+- spec: 04_fase-atual/specs/spec-1-007-painel-do-piloto.md
+- etapa: painel_no_ar — falta teste do ciclo (CL-007) e liberação dos envios reais
+- autorizacao_implementacao: confirmada 2026-10-20 ("Pode começar" — Igor Alves)
+- decisoes: Q-18=30; Q-19/Q-20 (linha de base 2h/dia, CNES+manuais+lista); Q-21 WhatsApp Igor 86 99493-2757, e-mail do teste a criar pelo Dario
+- teste_humano: provas T2/T3/T4/T5 por API (05_entregas/fase-1/spec-1-007/t2-green.md); teste do ciclo é humano (CL-007)
+- verificacao_automatica: QA verde (0.0.93–0.0.106); versão final 1f5d09d
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: 3de24ba (0.0.92)
-- skip_publicacao: publicada:3de24ba em 2026-10-20T18:48Z
-- pendente_github: fase.md (3 tasks marcadas [x]) e changelog — sincronizar na próxima rodada (STATUS/t1/decisão-q16/estado já sincronizados)
-- ultima_acao: SPEC-1-006 concluída (consulta diária PNCP + pipeline pública + triagem)
-- proxima_acao: SPEC-1-007 (painel do piloto) — pedir autorização; canais 004/005 aguardando o Dario
-- atualizado_em: 2026-10-20T16:00:00-03:00
+- skip_versao: 1f5d09d (0.0.106)
+- skip_publicacao: publicada:1f5d09d em 2026-10-20T19:35Z
+- pendente_github: fase.md/STATUS/changelog — sincronizar na próxima rodada (t2-green/estado/questionário já sincronizados)
+- ultima_acao: SPEC-1-007 implementada e provada; fixture e gancho de teste removidos; painel só leitura no ar
+- proxima_acao: teste do ciclo (Dario+Igor, precisa e-mail do teste) → liberação dos envios reais (RN-03) → fechamento com veredito (RN-04); canais 004/005 aguardando o Dario
+- atualizado_em: 2026-10-20T16:40:00-03:00
