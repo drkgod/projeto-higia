@@ -5,18 +5,18 @@
 - executor: Jarvis (ETHOS)
 - owner_informativo: Dario Calçada
 - spec: 04_fase-atual/specs/spec-1-003-pipelines-e-caixa-da-sdr.md
-- etapa_anterior: b19368a9 CONCLUÍDA (11/36)
+- etapa_anterior: b19368a9 CONCLUÍDA (12/36)
 - analise: .adapta-cliente/analises/6d68f7ab-b0fc-4720-85ae-a4b3fb82c244.md (pronta)
-- etapa: aguardando_autorizacao
-- autorizacao_implementacao: pendente (análise da 6d68f7ab)
-- teste_humano: aprovado pelo Igor em 2026-10-16 17:21 (caixa + volta para a caixa; 6d8d768)
-- verificacao_automatica: passou (QA 0.0.62–0.0.69; T5/T8; alerta de exclusão; correções do teste; consulta da caixa 200)
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-16-1920-rede-pipeline.md
+- etapa: implementada — aguardando_teste_humano
+- autorizacao_implementacao: confirmada 2026-10-20 ("Autorizar implementação da 6d68f7ab" — Igor Alves)
+- teste_humano: pendente (teste visual das telas /pipeline, /pipeline/:id e /oportunidade/:id; dados de teste no ar — REDE TESTE T1 + CLINICA UNICA T1)
+- verificacao_automatica: passou (QA 0.0.70–0.0.74 verde; prova T1 P1–P9 por API em 05_entregas/fase-1/spec-1-003/t1-telas.md; telas capturadas e verificadas)
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-20-1400-rotas-hooks.md
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: 6d8d768
-- skip_publicacao: publicada:6d8d768 em 2026-10-16T18:54:34Z
-- pendente_github: nao
-- ultima_acao: b19368a9 CONCLUÍDA (11/36) com teste aprovado; decisão do Igor registrada: 1 oportunidade por REDE (razão social), não por unidade — entra na análise da 6d68f7ab
-- proxima_acao: apresentar análise da 6d68f7ab ao Igor e aguardar autorização de implementação
-- atualizado_em: 2026-10-16T17:25:00-03:00
+- skip_versao: bd9fd62 (0.0.74)
+- skip_publicacao: publicada:bd9fd62 em 2026-10-20T14:04:16Z
+- pendente_github: changelog.md e STATUS.md (sync na conclusão, junto com a marcação da task)
+- ultima_acao: 6d68f7ab implementada e provada (T1 P1–P9 verdes) — telas /pipeline, /pipeline/:id e /oportunidade/:id com agrupamento por rede, RN-10, nota, Perdido com motivo e reativação; migration 0011 (datas do histórico)
+- proxima_acao: teste visual do Igor; depois limpeza dos dados de teste, changelog/STATUS no GitHub e conclusão da task (13/36)
+- atualizado_em: 2026-10-20T11:15:00-03:00
