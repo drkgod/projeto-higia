@@ -13,6 +13,9 @@ Respondidas em 13/10/2026 pelo Igor Alves (chat ETHOS).
 | Q-15 | Qual domínio novo vai mandar os e-mails? | outbound.higiatec.com.br (subdomínio dedicado, decidido 20/10/2026 — conforme proposta da SPEC: domínio separado do principal para aquecer) | Igor Alves | 20/10/2026 |
 | Q-17 | Quem tria as licitações? | Igor e Dario | Igor Alves | 13/10/2026 |
 | Q-18 | Qual o mínimo de contatos efetivos a cada 100 leads para manter o público? | PENDENTE — "não defini ainda" (sugestão do kickoff: 30) | Igor Alves | 13/10/2026 |
+| Q-19 | Quanto tempo a SDR gasta hoje para montar uma lista de 100 leads? (linha de base — SPEC-1-007) | PENDENTE | Igor Alves | — |
+| Q-20 | Como a SDR trabalha hoje para montar a lista? (fontes, ferramentas, critério — linha de base) | PENDENTE | Igor Alves | — |
+| Q-21 | Qual e-mail e qual WhatsApp usar no teste do ciclo completo? (clínica de teste: e-mail do Dario + WhatsApp do Igor) | PENDENTE | Igor Alves | — |
 
 ## DECISÃO DO CLIENTE (registro)
 
