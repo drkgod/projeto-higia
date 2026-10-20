@@ -1,22 +1,20 @@
 # Estado atual — Adapta Cliente
 
 - schema_version: adapta-cliente-state/v2
-- task_id: 6d68f7ab-b0fc-4720-85ae-a4b3fb82c244
+- task_id: SPEC-1-005 (whatsapp-uazapi) — código
 - executor: Jarvis (ETHOS)
 - owner_informativo: Dario Calçada
-- spec: 04_fase-atual/specs/spec-1-003-pipelines-e-caixa-da-sdr.md
-- etapa_anterior: b19368a9 CONCLUÍDA (12/36)
-- analise: .adapta-cliente/analises/6d68f7ab-b0fc-4720-85ae-a4b3fb82c244.md (pronta)
-- etapa: concluida
-- autorizacao_implementacao: confirmada 2026-10-20 ("Autorizar implementação da 6d68f7ab" — Igor Alves)
-- teste_humano: aprovado 2026-10-20 ("Está funcional a tela" — Igor Alves); decisão: identidade visual fica para task própria (design depois)
-- verificacao_automatica: passou (QA 0.0.70–0.0.77 verde; prova T1 P1–P9 por API em 05_entregas/fase-1/spec-1-003/t1-telas.md; telas capturadas e verificadas)
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-20-1400-rotas-hooks.md
+- spec: 04_fase-atual/specs (SPEC-1-005; decisões em 06_notas/decisao-whatsapp.md)
+- etapa: codigo_implementado_e_provado — aguardando canal (Dario)
+- autorizacao_implementacao: confirmada 2026-10-20 ("autorizo" — Igor Alves)
+- teste_humano: provas T1–T6 por API em modo de teste (05_entregas/fase-1/spec-1-005/t1.md); teste de entrega real só após segredos/número
+- verificacao_automatica: passou (QA 0.0.78–0.0.82 verde; versão final 4779a2b publicada)
+- aprendizado: capturado (HMAC $security.hs256(valor, chave); rotas de hook sem /api; 1 routerAdd por arquivo)
 - sistema: CRM_Higia
 - skip_projeto: 62151
-- skip_versao: c92d1fd (0.0.77)
-- skip_publicacao: publicada:c92d1fd em 2026-10-20T14:28:47Z
-- pendente_github: nenhum — fase.md/STATUS/changelog sincronizados na conclusão
-- ultima_acao: 6d68f7ab CONCLUÍDA (13/36) — teste do Igor aprovado, correção de sessão expirada (f4e3ea9), limpeza executada (3 orgs/3 ops/13 atividades apagadas; usuários de teste desativados; gancho t1 removido) e registros fechados no repo
-- proxima_acao: task nova de identidade visual (decisão do Igor: design depois); próxima task funcional do fase.md (e-mail da cadência — SPEC-1-004)
-- atualizado_em: 2026-10-20T11:35:00-03:00
+- skip_versao: 4779a2b (0.0.82)
+- skip_publicacao: publicada:4779a2b em 2026-10-20T16:13:44Z
+- pendente_github: fase.md (marcadores [/] das 2 tasks) e changelog — sincronizar ao ligar o canal
+- ultima_acao: SPEC-1-005 implementada e provada em modo de teste (remetente + webhook de entrada); limpeza executada; fila real intacta
+- proxima_acao: Dario ligar o canal (número dedicado, segredos UAZAPI_TOKEN/UAZAPI_URL, webhook, aquecimento); depois provas de entrega real (T7/T8) e SPEC-1-004 (e-mail)
+- atualizado_em: 2026-10-20T13:20:00-03:00
