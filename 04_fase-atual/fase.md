@@ -123,15 +123,18 @@ tarefas que já têm um.
   > Resposta entra no histórico e pausa a cadência; SAIR bloqueia a pessoa para sempre; eco ignorado; número sem WhatsApp marcado inválido; silêncio do webhook gera alerta.
   > SPEC-1-005 · CA-1-25, CA-1-47 · Prova: T4, T5, T6, T7, T9.
   > Webhook de entrada implementado e provado em modo de teste 20/10 (t1.md: resposta pausa e cancela; SAIR grava opt-out + HMAC na supressão e nunca retoma; eco ignorado; número sem WhatsApp marcado inválido). Falta o webhook real da Uazapi apontando para o backend.
-- [ ] Trazer as licitações do PNCP para a pipeline pública @"Dario Calçada" !28/10/2026 [interno]  <!-- id:5534b6ad-1773-4d9b-8d0c-916a245a6687 -->
+- [x] Trazer as licitações do PNCP para a pipeline pública @"Dario Calçada" !28/10/2026 [interno]  <!-- id:5534b6ad-1773-4d9b-8d0c-916a245a6687 -->
   > Consulta diária da API pública do PNCP por modalidade, com filtro de palavras e estados feito no sistema (Q-16), sem repetir edital e respeitando o limite de chamadas.
   > SPEC-1-006 · CA-1-26, CA-1-27 · Prova: T1, T2, T3, T6.
-- [ ] Triar as licitações na pipeline pública @"Dario Calçada" !30/10/2026 [interno]  <!-- id:780ea26b-05c1-4156-b723-996117e9f413 -->
+  > Concluída 20/10/2026: consulta diária do PNCP com filtro da Q-16, cursor e retentativa; provas T1–T6 em 05_entregas/fase-1/spec-1-006/t1.md (14 oportunidades reais; idempotência; falha com cursor; triagem RN-06).
+- [x] Triar as licitações na pipeline pública @"Dario Calçada" !30/10/2026 [interno]  <!-- id:780ea26b-05c1-4156-b723-996117e9f413 -->
   > O responsável marca aderente ou descartada com motivo; o sistema nunca envia proposta nem documento.
   > SPEC-1-006 · CA-1-28 · Prova: T4.
-- [ ] Ajustar o filtro de licitações no admin @"Dario Calçada" !29/10/2026 [interno]  <!-- id:4c42dd0c-10a3-47d7-a4a7-71ea277203a0 -->
+  > Concluída 20/10/2026: rota de triagem RN-06 (motivo obrigatório) + tela /publico; T4 verde.
+- [x] Ajustar o filtro de licitações no admin @"Dario Calçada" !29/10/2026 [interno]  <!-- id:4c42dd0c-10a3-47d7-a4a7-71ea277203a0 -->
   > Palavras, modalidades e estados editáveis no admin, com efeito na consulta seguinte; lista de palavras vazia não roda e gera alerta.
   > SPEC-1-006 · CA-1-29 · Prova: T5.
+  > Concluída 20/10/2026: configuracao.pncp (palavras/modalidades/UFs) editável; T5 verde (palavra sem match não cria; lista vazia não roda + alerta).
 - [ ] Montar o painel do piloto @"Dario Calçada" !12/11/2026 [interno]  <!-- id:e45e573d-7e0a-4e67-8852-7be68332fe04 -->
   > Nove indicadores com definição fixa por pipeline e período, sem dados de teste, comparando contatos efetivos a cada 100 com o mínimo da Higia; abaixo da amostra mínima mostra amostra insuficiente.
   > SPEC-1-007 · CA-1-30, CA-1-32 · Prova: T1 a T4.
