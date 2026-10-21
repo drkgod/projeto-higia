@@ -247,3 +247,43 @@
 - Linha de base registrada (RN-01) em configuracao.linha_de_base com autor, data e marca "declarado"; amostra_minima=30.
 - Provas T2/T3/T4/T5 verdes (t2-green.md): fixture com 12+3 oportunidades bateu os 9 indicadores esperados (12/10/10/9/6/3/30/4/1); veredito "amostra insuficiente" com 30 e "no mínimo ou acima" com 10; recálculo de contato_efetivo provado; linha de base no retorno. Fixture e gancho de teste removidos.
 - Versão final 1f5d09d (0.0.106). Pendências: teste do ciclo (CL-007, Dario+Igor), liberação dos envios reais (RN-03), fechamento com veredito (RN-04).
+
+## 21/10/2026 · Jarvis (ETHOS) · Correções pós-demo e melhorias da tela de aprovação
+
+- Demo à Jesus expôs fricções: aprovar travava sem explicação (RN-12: CNPJ ativo + canal válido) e "Nenhum dado mudou" ao salvar era a tela não recarregar.
+- d3df272: painel de requisitos da aprovação ao vivo (✓/○), feedback do que mudou ao salvar (mudancas_detalhe) e filtros na caixa de trabalho (seções com contadores + busca).
+- 5c93a9e: edição em card dedicado (botão "Editar informações" + estado "✓ Informações salvas"), erro de aprovação lista TODOS os requisitos faltantes numa mensagem só, ação voltar_revisao (acionável → em revisão, cancela oportunidade aguardando).
+- Chagas Aragão restaurada para a demo (em_revisao, nota 72, sem CNPJ). Fluxo completo provado depois: CNPJ + equipamentos + e-mail → aprovar → acionável → oportunidade criada.
+- 12:04 bug da pipeline vazia corrigido (c36e8db): oportunidade gravava o NOME da pipeline (vinha do ICP) em vez do ID — registro da Chagas corrigido e hook resolve nome → id na criação.
+
+## 21/10/2026 · Jarvis (ETHOS) · E-mail no ar (tarefa do Dario cumprida com 2 dias de folga)
+
+- DNS do outbound.higiatec.com.br configurado na HostGator (3 registros; DKIM corrigido para resend._domainkey.outbound) — domínio Verified na Resend.
+- SMTP do projeto configurado no Skip (smtp.resend.com porta 465 — 587 dava erro de TLS) com remetente prospeccao@outbound.higiatec.com.br e reply-to comercial@.
+- Webhook /backend/v1/email/entrada mapeado para os eventos nativos da Resend (bounced/complained → bounce; delivered → ignora).
+- Teste de entrega completo nos 2 sentidos provado: e-mail chegou no Igor e resposta capturada pelo webhook pausou a cadência (RN-04) e criou tarefa para a SDR. Canal desligado de volta; gancho teste_entrega_email.js fica para remover na próxima rodada (2× apply).
+- Decisão do Igor sobre a chave da Resend exposta no chat: NÃO rotacionar (nova chave também seria exposta — loop); mitigação real = escopo "Sending access" + domínio dedicado.
+
+## 21/10/2026 · Jarvis (ETHOS) · Melhorias de navegação (67332f5)
+
+- Botão "Abrir clínica" na tela da oportunidade (leva ao painel de edição da clínica; volta para onde veio).
+- Aviso azul "clínica na cadência" no bloco de edição: os envios agendados leem os dados na hora de enviar — cadastrar canal agora já resolve o próximo passo.
+
+## 21/10/2026 · Jarvis (ETHOS) · Emenda ENTRADA MANUAL concluída (autorizada pelo Igor)
+
+- Caso de uso: pessoa que JÁ procurou a Higia e teve reunião (entrada quente) — não faz sentido passar por cadência fria de SDR.
+- Migration 0013: campo select `origem` ('cadencia' | 'manual') em organizacoes e oportunidades.
+- Rota POST /backend/v1/pipeline/{pipelineId}/entrada-manual: só admin/gestor; nome + justificativa obrigatórios; dedupe por CNPJ ou nome exato (1ª versão dedupe nome+uf criava dupla — corrigido); clínica nasce acionavel/motivo entrada_manual/pontuacao 0; oportunidade nasce estado ativo SEM cadencia, fora do ICP, responsável = quem criou; contato opcional (fonte manual, confiança alta); auditoria em alteracoes + atividades.
+- Botão "Adicionar oportunidade" no quadro da pipeline (só admin/gestor) com formulário completo.
+- Proteções: pontuacao.js pula origem=manual (rota E cron — provado: 198 repontuadas sem tocar a manual); cadencia_motor e fila de entrada filtram origem != 'manual'.
+- Provas em produção: criação 200 com etapa escolhida; 0 envios; idempotência 400; SDR bloqueado; dados de prova apagados (0 sobras). Versão final c933f32 (0.0.124).
+- Aprendizado: delete de organizacao é só superuser — limpeza de prova exige gancho temporário server-side (criar, rodar, remover 2× apply; slug não começa com ponto).
+
+## 21/10/2026 · Jarvis (ETHOS) · LinkedIn + observações na oportunidade (438cbc0, 0.0.126)
+
+- Pedido do Igor: sem onde registrar o que acontece com o cliente e sem o texto do LinkedIn pronto.
+- Rota POST /backend/v1/tarefa/{id}/linkedin: grava atividade tipo=linkedin (saída) com o texto enviado (padrão: mensagem_sugerida da tarefa) e conclui a tarefa; sdr só na própria carteira.
+- Botão "Registrar LinkedIn" com modal de texto copiável: na CAIXA (substitui "Concluir" para tipo linkedin) e na aba Tarefas da oportunidade (tarefas agora mostram a mensagem_sugerida).
+- Campo "Observação — o que está acontecendo" no card Ações da oportunidade (grava via rota nota, com autor e data no histórico) — vale para oportunidade manual E de cadência.
+- Provas: rota responde (404 com id inválido), 2 tarefas LinkedIn abertas da Chagas Aragão com mensagem_sugerida pronta (D1/D3). Erro de build no caminho corrigido (fechamento duplicado do componente).
+- Pendência menor: o texto exibido traz a variável {{primeiro_nome}} — resolver no display é meia hora, na próxima rodada se o Igor quiser.
